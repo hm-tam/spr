@@ -1,0 +1,59 @@
+fields:
+  content:
+    type: redactor
+    image_dir: assets/img/contact
+    file_dir: assets/files
+
+
+  section_billing:
+    display: Billing
+    type: section
+
+  billing_phone:
+    display: Phone No.
+
+  billing_email:
+    display: Email Address
+
+  billing_url:
+    display: URL
+
+
+  section_contact:
+    display: Contact
+    type: section
+
+  admin_phone:
+    display: Administration Phone No.
+
+  admin_address:
+    type: redactor
+    options:
+      buttons:
+        - html
+
+  appointments_phone:
+    display: Appointments Phone No.
+
+  fax:
+    display: Fax No.
+
+  email:
+    display: Email Address
+
+  refer_a_patient_scheduling_hours:
+
+
+  section_physicians_portal:
+    display: Physicians Portal
+    type: section
+
+  physicians_portal_url:
+    display: Physicians Portal URL
+
+  physicians_portal_phone:
+    display: Phone No.
+
+
+
+hide: true

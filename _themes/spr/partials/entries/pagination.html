@@ -1,0 +1,35 @@
+<li {{ if !previous_page }}class="disabled"{{ /if }}>
+  <a href="{{ previous_page }}" aria-label="Previous">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+</li>
+
+
+{{ if current_page > 1 }}
+  <li>
+      <a href="?page={{ current_page|-:1 }}">{{ current_page|-:1 }}</a>
+  </li>
+{{ /if }}
+
+<li class="active">
+    <a href="?page={{ current_page }}">{{ current_page }}</a>
+</li>
+
+{{ if total_pages > current_page }}
+  <li>
+      <a href="?page={{ current_page|+:1 }}">{{ current_page|+:1 }}</a>
+  </li>
+{{ /if }}
+
+{{ if current_page === 1 AND total_pages > 2 }}
+  <li>
+      <a href="?page=3">3</a>
+  </li>
+{{ /if }}
+
+
+<li {{ if !next_page }}class="disabled"{{ /if }}>
+  <a href="{{ next_page }}">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</li>

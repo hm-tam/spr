@@ -1,0 +1,526 @@
+<div id="carousel--home" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    {{ slides }}
+      <div class="item {{ if first }}active{{ /if }}"
+           style = "background-image:    url('{{ img }}');
+                    background-size:     cover;
+                    background-position: 50% 50%;
+                    height:              500px; "
+      >
+        <div class="carousel-caption">
+          <div class="container">
+            <h3>{{ caption }}</h3>
+            <p>{{ details }}</p>
+          </div>
+        </div>
+      </div>
+    {{ /slides }}
+  </div>
+
+  <a class="left carousel-control" href="#carousel--home" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel--home" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+<div class="visible-xs">{{ theme:partial src="navs/quick_links_mobile" }}</div>
+
+
+
+
+
+  <section class="row">
+    <div class="container">
+      <div class="col-xs-12">
+        {{ get_content from="/about" }}
+          <h1 class="title">{{ title }} Us</h1>
+          <div class="center-block cols-2">
+            <p class="two-cols">{{ content|striptags }} <a href="/about"> Learn More</a></p>
+          </div>
+        {{ /get_content }}
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="row alt-color">
+    <div class="container">
+      <div class="col-xs-12">
+        {{ get_content from="/services" }}
+          <h1 class="title">Our {{ title }}</h1>
+          <div class="center-block">
+            {{ content }}
+          </div>
+        {{ /get_content }}
+
+
+        <div class="row">
+          {{ pages:listing folder="/services" }}
+            <div class="col-xs-12 col-sm-4">
+              <img
+                src      = "/_themes/spr/img/blank.png"
+                data-src = "{{ transform
+                                src    = '{img_primary}'
+                                action = 'smart'
+                                height = '300'
+                                width  = '400'
+                            }}"
+              >
+              <h2 class="h1">{{ title|upper }}</h2>
+              <div class="hidden-xs">
+                {{ content }}
+
+
+                <ul class="service-list">
+                  <strong>{{ title }} Services</strong>
+                  {{ nav from="{url}" }}
+                    <li><a href="{{ url }}">{{ title }}</a></li>
+                  {{ /nav }}
+                </ul>
+                <hr>
+                <p><a href="{{ url }}" class="link-more">Learn more <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+              </div>
+            </div>
+          {{ /pages:listing }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="row">
+    <div class="container">
+      <div class="col-xs-12 visible-xs">
+        <h1 class="title">{{ featured_services_title }}</h1>
+        {{ relate:featured_services }}
+          <a href="{{ url }}" class="btn btn-primary btn-block">
+            {{ title }}
+          </a>
+        {{ /relate:featured_services }}
+      </div>
+
+
+      <div class="col-xs-12 hidden-xs">
+        <h1 class="title">{{ featured_services_title }}</h1>
+        {{ featured_services_description|markdown }}
+
+        <div class="ug-row">
+          {{ relate:featured_services }}
+            <div class="ug-col">
+              <img
+                src      = "/_themes/spr/img/blank.png"
+                data-src = "{{ transform
+                                src    = '{img_primary}'
+                                width  = '300'
+                                height = '200'
+                                action = 'smart'
+                            }}"
+              >
+              <a href="{{ url }}" class="btn btn-primary btn-block">
+                {{ title }}
+              </a>
+
+              <p>{{ description }}</p>
+              <hr>
+              <p>
+                <a href="{{ url }}" class="link-more">
+                  Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </p>
+            </div>
+          {{ /relate:featured_services }}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<section class="ad ad-inset ad-blue">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">Amenities Offered</h1>
+      <ul class="row list-unstyled">
+        {{ amenities }}
+          <li class="col-xs-12 col-sm-4">
+            <div class="row">
+              <div class="col-xs-3">
+                <img
+                  src      = "/_themes/spr/img/blank.png"
+                  data-src = "{{ transform
+                                src    = '{icon}'
+                                action = 'smart'
+                                height = '100'
+                                width  = '100'
+                            }}"
+                  alt      = "{{ amenity }}"
+                >
+              </div>
+
+              <div class="col-xs-9">
+                <h2>{{ amenity|upper }}</h2>
+                <p>{{ description }}</p>
+              </div>
+            </div>
+          </li>
+        {{ /amenities }}
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="row alt-color">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">Our Team</h1>
+      {{ team_description|markdown }}
+
+
+      <div class="btn-group row center-block mb-md carousel--our-team-controls" role="group">
+        <div
+          class      = "btn btn-default col-xs-2 col-sm-1 col-sm-offset-3"
+          role       = "button"
+          data-slick = "prev"
+        >
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </div>
+
+        <h2 class="team-label text-uppercase mt-0 col-xs-8 col-sm-4">
+          {{ featured_teammates_label }}
+        </h2>
+
+        <div
+          class      = "btn btn-default col-xs-2 col-sm-1"
+          role       = "button"
+          data-slick = "next"
+        >
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </div>
+      </div>
+
+
+      <div class="carousel--our-team col-xs-12">
+        {{ relate:featured_teammates }}
+          <div class="thumbnail team-listing-teammate">
+            <a href="{{ url }}" class="avatar">
+              <img
+                src      = "/_themes/spr/img/blank.png"
+                data-src = "{{ transform
+                            src    = '{avatar}'
+                            width  = '265'
+                            height = '265'
+                            action = 'smart'
+                            upsize = 'true'
+                        }}"
+                alt      = "{{ title }}'s avatar"
+              >
+            </a>
+
+            <div class="caption">
+              <header class="text-center">
+                <h4>{{ title }}</h4>
+                <p><i class="text-muted">{{ practice_area }}</i></p>
+              </header>
+              <p>{{ content|striptags|truncate:200 }}</p>
+              <br>
+            </div>
+          </div>
+        {{ /relate:featured_teammates }}
+      </div>
+
+      <p class="text-center">
+        <a href="/our-team" class="btn btn-primary">View all physicians and staff</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="row">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">News and Events</h1>
+      {{ get_content from="news-and-events" }}
+        {{ content }}
+      {{ /get_content }}
+
+      <hr>
+
+      <div class="row" id="news">
+        {{ entries:listing
+            folder = "news-and-events"
+            limit  = "4"
+        }}
+          <div class="col-xs-12 col-sm-3">
+            <a href="{{ url }}">
+              <img
+                src      = "/_themes/spr/img/blank.png"
+                data-src = "{{ transform
+                                src    = '{img_primary}'
+                                action = 'crop'
+                                width  = '400'
+                            }}"
+              >
+            </a>
+            <header>
+              <a href="{{ url }}"><h4>{{ title }}</h4></a>
+              <time datetime="{{ date format="Y-m-d" }} {{ time format="H:i" }}" class="text-primary">
+                <span class="glyphicon glyphicon-calendar"></span>
+                {{ date }}
+              </time>
+            </header>
+            <p>{{ content|striptags|truncate:200 }}</p>
+            <p class="text-muted small">
+              Posted in: {{ category }}{{ if tags }},{{ /if }} {{ tags|list|title }}
+            </p>
+            <hr>
+            <p>
+              <a href="{{ url }}" class="link-more">
+                Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </p>
+
+            {{ if !last }}<hr class="visible-xs">{{ /if }}
+          </div>
+        {{ /entries:listing }}
+      </div>
+
+      <p class="text-center">
+        <a href="/news-and-events" class="btn btn-primary hidden-xs">View all news and events</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+{{ get_content from="/contact" }}
+<section class="row alt-color">
+  <div class="container">
+    <div class="col-xs-12">
+    {{ if twitter_widget_code }}
+      <h1 class="title">Recent Tweets</h1>
+      <div class="text-center">
+        {{ twitter_widget_code }}
+      </div>
+
+
+    {{ elseif current_member:is_admin }}
+      <h1 class="title">Recent Tweets</h1>
+      <p>
+        <a href="/admin.php/publish?path=page" class="btn btn-default btn-lg btn-block">
+          Add recent tweets
+        </a>
+      </p>
+      <div class="alert alert-info">
+        <p>
+          The entire Recent Tweets section remains hidden from non-admins unless you embed tweets.
+        </p>
+      </div>
+    {{ /if }}
+    </div>
+  </div>
+</section>
+{{ /get_content }}
+
+
+
+
+<section class="row">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">Testimonials and Reviews</h1>
+      {{ testimonials_description|markdown }}
+      <div class="row">
+        <div class="col-md-1">
+          <div class="btn btn-default" role="button" data-slick="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div class="carousel--testimonials center-block row">
+            {{ testimonials }}
+              <div>
+                <div class="col-xs-4 text-center">
+                  <img
+                    src      = "/_themes/spr/img/blank.png"
+                    data-src = "{{ transform
+                                    src    = '{photo}'
+                                    width  = '100'
+                                    height = '100'
+                                    action = 'smart'
+                                }}"
+                    class      = "img-circle center-block"
+                  >
+                  <p>
+                    <b>{{ name }}</b><br>
+                    <span class="text-primary">{{ location }}</span>
+                  </p>
+                </div>
+
+                <div class="col-xs-8">
+                  {{ testimonial|markdown }}
+                </div>
+              </div>
+            {{ /testimonials }}
+          </div>
+        </div>
+        <div class="col-md-1">
+          <div class="btn btn-default" role="button" data-slick="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="row alt-color">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">For Physicians</h1>
+      {{ get_content from="/for-physicians" }}
+        {{ content }}
+      {{ /get_content}}
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title text-uppercase">
+                <span class="glyphicon glyphicon-plus-sign"></span>
+                Physicians Portal
+              </h2>
+            </div>
+
+            <div class="panel-body">
+              <form action="https://portal.stpaulrad.com/portal.web/Account/LogOn">
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type        = "text"
+                    name        = "username"
+                    id          = "username"
+                    placeholder = "username"
+                    class       = "form-control"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type        = "password"
+                    name        = "password"
+                    id          = "password"
+                    placeholder = "password"
+                    class       = "form-control"
+                    required
+                  >
+                </div>
+
+                <p>
+                  {{#<a href="https://portal.stpaulrad.com/Portal.Web/Account/ForgotPassword">
+                    Forgot your password?
+                  </a><br>#}}
+                  Portal Help: <span class="glyphicon glyphicon-earphone"></span>
+                  {{ get_content from="/contact" }}
+                    {{ physicians_portal_phone }}
+                  {{ /get_content }}
+                </p>
+
+                <button type="submit" class="btn btn-primary btn-lg center-block">Login</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title text-uppercase">
+                <span class="glyphicon glyphicon-share"></span>
+                Refer a Patient
+              </h2>
+            </div>
+
+            <div class="panel-body">
+              {{ get_content from="/for-physicians/refer-a-patient" }}
+                {{ listing_description|markdown or content }}
+              {{ /get_content }}
+
+              <p><b>Scheduling Hours:</b> {{ refer_a_patient_scheduling_hours }}</p>
+
+              {{ get_content from="/contact" }}
+                <ol class="list-unstyled">
+                  <li><span class="glyphicon glyphicon-earphone"></span> {{ admin_phone }}</li>
+                  <li><span class="glyphicon glyphicon-print"></span> {{ fax }}</li>
+                </ol>
+              {{ /get_content }}
+              <div class="text-center">
+                <a href="/for-physicians/refer-a-patient" class="btn btn-primary">
+                  Learn more
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title text-uppercase">
+                <span class="glyphicon glyphicon-question-sign"></span>
+                Ask an Expert
+              </h2>
+            </div>
+
+            <div class="panel-body">
+              {{ theme:partial src="forms/ask-an-expert" }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="ad ad-inset" style="background-image: url('{{ transform src='{promotion_bg_img}' }}')">
+  <div class="container">
+    <div class="col-xs-12">
+      <h1 class="title">{{ promotion_title }}</h1>
+      {{ promotion }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+fields:
+  img_primary:
+    display: Primary Image
+    type: file
+    max_files: 1
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    destination: assets/img/news-and-events
+    required: true
+
+  category:
+    required: true
+    type: suggest
+    max_items: 1
+    options:
+      - News
+      - Events
+
+  tags:
+    type: suggest
+    max_items: 2
+    allow_blank: true
+    create: true
+    taxonomy:
+      folder: news-and-events
+      type: tags
+    instructions: >
+      Add up to two additional tags to filter entries by. These will display alongside categories.
+
+
+  content:
+    type: redactor
+    image_dir: assets/img/news-and-events
+    file_dir: assets/files
+
+
+
+
+hide: true

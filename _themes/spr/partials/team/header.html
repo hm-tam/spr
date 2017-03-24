@@ -1,0 +1,51 @@
+{{ get_content from="{segment_1}" }}
+  <h1>
+    {{ title }}
+    {{ if segment_2 AND segment_3 }}
+      - {{ segment_2|deslugify|title:smart }}: {{ segment_3|deslugify|title:smart }}
+    {{ /if }}
+  </h1>
+  {{ content }}
+{{ /get_content }}
+
+
+<div class="row">
+  {{ if segment_2 !== "filter-letter" }}
+    <div class="col-xs-12 col-sm-3">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          View by practice area <span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+          {{ taxonomy:listing
+              folder = "{segment_1}"
+              type   = "practice_area"
+          }}
+            <li><a href="/{{ segment_1 }}/practice-area/{{ name|slugify }}">{{ name }}</a></li>
+          {{ /taxonomy:listing }}
+          <li class="divider"></li>
+          <li><a href="/{{ segment_1 }}">View all</a></li>
+        </ul>
+      </div>
+    </div>
+  {{ /if }}
+
+
+
+  {{ if segment_2 !== "practice-area" }}
+    <div class="col-xs-12 col-sm-9">
+      <nav role="navigation">
+        <div class="sr-only">Filter by first letter of last name.</div>
+        <ul class="list-inline">
+          {{ taxonomy:listing
+              folder = "{segment_1}"
+              type   = "filter_letter"
+          }}
+            <li><a href="/{{ segment_1 }}/filter-letter/{{ name|slugify }}">{{ name }}</a></li>
+          {{ /taxonomy:listing }}
+        </ul>
+      </nav>
+    </div>
+  {{ /if }}
+</div>

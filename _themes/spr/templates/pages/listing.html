@@ -1,0 +1,47 @@
+{{ if redirection }}{{ redirect to="{redirection}" }}{{ /if }}
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="title">{{ title }}</h1>
+      {{ content }}
+    </div>
+  </div>
+
+  <div class="row">
+    {{ pages:listing }}
+    <div class="col-xs-12 col-sm-4 narrow">
+    <div class="col-narrow">
+      {{ if redirection }}
+        {{ get_content from="{redirection}" }}
+
+            <h2 class="h1 center"><a href="{{ url }}">{{ title|upper }}</a></h2>
+            <a href="{{ url }}">
+              <img
+                src      = "/_themes/spr/img/blank.png"
+                data-src = "{{ transform
+                                src   = '{img_primary}'
+                                width = '400'
+                            }}"
+              >
+            </a>
+
+            <p>{{ content|striptags|truncate:200 }}</p>
+            
+            <a href="{{ url }}" class="btn btn-primary center-block">
+              Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+          </div>
+        {{ /get_content }}
+      {{ else }}
+        {{ theme:partial
+            src         = "listings/page"
+            use_context = "true"
+        }}
+      {{ /if }}
+    </div>
+    {{ /pages:listing }}
+  </div>
+</div>

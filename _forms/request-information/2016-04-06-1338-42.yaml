@@ -1,0 +1,24 @@
+---
+first_name: Robert
+last_name: Wolfe
+name_suffix: ""
+email: robert.j.57.wolfe@gmail.com
+organization: none
+phone: "7155057610"
+pager: "7155057610"
+address_1: 312 micheels lane
+address_2: apartment 3
+city: menomonie
+state: WI
+zip: "54751"
+comments: 'i have a wound on right leg that’s not healing & was told to get vein work done on that leg as well.  this wound is new & not as bad as shin on left leg, however it still needs to be done.  unsure if i’m covered by insurance because some say its just cosmetic vs helping wound heal.  what is the name of procedure so i can figure out where i’m going to have it done?  cost?  i have vericose veins in right leg also(mainly around knee).'
+patient_interests:
+  - Please send me information by email.
+  - Please send me information by regular mail.
+send_requests:
+  - A map to SPR Maplewood.
+  - A map to SPR Eagan.
+  - A map to SPR Downtown.
+  - A map to SPR Gallery Towers.
+  - A map to SPR Roseville.
+---

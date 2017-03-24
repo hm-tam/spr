@@ -1,0 +1,7 @@
+---
+_fieldset: page
+title: Pay Bill Online
+img_primary: /assets/img/Online Bill Pay.jpg
+listing_description: Easy and convenient, you can pay your bill online. If you have any questions regarding online bill pay please contact St. Paul Radiology Billing Office at 1.877.556.0695 for further assistance.
+---
+<hr><h3>Easy and Convenient, You Can <a href="http://www.ezmedinfo.com/mps1" target="_blank">Pay Your Bill Online</a></h3><p>Please click <a href="http://www.ezmedinfo.com/mps1" target="_blank">here</a> to be directed to our Online Bill Pay site.</p><p>If your radiology procedure is at any of the five St. Paul Radiology out-patient imaging centers, your bill will come from St. Paul Radiology Outpatient Imaging, an affiliate of St. Paul Radiology, P.A. If your radiology procedure is at any of the hospitals served by St. Paul Radiology, your bill will come from St. Paul Radiology, P.A. for the professional reading of the examination.<br></p><p>If you have any questions regarding online bill pay please contact St. Paul Radiology Billing Office at <a href="tel: 1.877.556.0695 ">1.877.556.0695</a> during normal business hours of 8:00AM to 4:00PM Monday through Friday for further assistance. If you have questions, concerns or complaints, please email us at: <a href="mailto:mailto:billing@stpaulradiology.com">billing@stpaulrad.com</a>.</p><p>As always, thank you for entrusting your medical care to St. Paul Radiology, P.A.</p>

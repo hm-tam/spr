@@ -1,0 +1,127 @@
+# Location (from root) to save form submissions
+submission_save_path: _forms/give-feedback/
+
+# Fields allowed to be submitted in the form, automatically
+# purging anything and everything else
+allowed:
+  - site_visit_time
+  - location
+  - staff_commend
+  - importance_access_to_locations
+  - importance_hours
+  - importance_confirmation_call
+  - importance_advance_billing_explanation
+  - importance_staff_knowledge
+  - importance_staff_courteous
+  - importance_access_to_radiologist
+  - experience_location
+  - experience_hours
+  - experience_scheduling_ease
+  - experience_registration
+  - experience_billing_explanation
+  - experience_exam_timeliness
+  - experience_imaging_center_appearance
+  - experience_staff_knowledge
+  - experience_staff_courtesy
+  - experience_radiologist_availability
+  - experience_overall
+  - who_scheduled
+  - who_scheduled_other
+  - would_return
+  - would_return_why_not
+  - comments
+
+# You are not required to require fields, but once you do, any missing
+# from the POST will squash this submission and send a list of
+# missing fields to your {{ raven:errors }} tagpair
+required:
+  - site_visit_time
+  - location
+  - importance_access_to_locations
+  - importance_hours
+  - importance_confirmation_call
+  - importance_advance_billing_explanation
+  - importance_staff_knowledge
+  - importance_staff_courteous
+  - importance_access_to_radiologist
+  - experience_location
+  - experience_hours
+  - experience_scheduling_ease
+  - experience_registration
+  - experience_billing_explanation
+  - experience_exam_timeliness
+  - experience_imaging_center_appearance
+  - experience_staff_knowledge
+  - experience_staff_courtesy
+  - experience_radiologist_availability
+  - experience_overall
+  - who_scheduled
+  - would_return
+
+submission_save_extension: yaml
+
+# Apply validation rules to specific fields. Refer to documentation
+# for a full list of available rules and their format
+# validate:
+
+# Error messages can be mapped to your fields and passed to the
+# template upon failure. They will be available here:
+#
+# {{ raven:error }}
+#     {{ invalid }}
+#         {{ field }} : {{ message }}
+#     {{ /invalid }}
+# {{ /raven:error }}
+#
+# messages:
+#   staff_commend: "You must enter the staff member's name using alphanumeric characters."
+#   who_scheduled_other: >
+#     You must enter the name of who scheduled your appointment using alphanumeric characters.
+#   would_return_why_not: "You must enter why you wouldn't return using alphanumeric characters."
+#   comments: "You must enter your comments using alphanumeric characters."
+
+# Configure notification email
+email:
+  to: "contact.us@stpaulrad.com"
+  from: "contact.us@stpaulrad.com"
+  subject: "Feedback from the Give Feedback form"
+  automagic: true
+  # html_template: html_email
+  # text_template: text_email
+
+datestamp_format: "m/d/Y"
+
+control_panel:
+  fields:
+    location: Location
+    would_return_why_not: "Problem"
+    comments: Comments
+  metrics:
+    -
+      type: average
+      field: experience_overall
+      label: Overall Experience
+      precision: 1
+    -
+      type: average
+      field: experience_exam_timeliness
+      label: Timeliness of Exam
+      precision: 1
+    -
+      type: average
+      field: experience_staff_knowledge
+      label: Staff Knowledge
+      precision: 1
+    -
+      type: average
+      field: experience_staff_courtesy
+      label: Staff Courtesy
+      precision: 1
+    -
+      type: tally
+      field: location
+      label: Location
+    -
+      type: tally
+      field: staff_commend
+      label: Great Job

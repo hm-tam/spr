@@ -1,0 +1,102 @@
+{{#
+    # Vars
+    visibility_class     string Class to add to control visibility. Ex. hidden-xs / visible-xs.
+    data_toggle_dropdown bool   Should dropdowns be toggled on tap/click?
+#}}
+
+
+
+
+<a href="#content" class="sr-only">Skip to content</a>
+
+<div class="{{ visibility_class }}">
+  <nav class="navbar navbar-default" id="nav_primary" data-spy="affix" data-offset-top="191">
+    <div class="container">
+      <p class="navbar-text visible-xs">
+        The Name You Trust. The Value You Deserve.
+      </p>
+      <div class="navbar-header navbar-fixed-top">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapsible" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+
+
+      <div class="collapse navbar-collapse" id="nav-collapsible">
+        <ul class="nav navbar-nav">
+
+          {{ get_content
+              from        = "/globals"
+              show_drafts = "true"
+          }}
+            {{ nav_primary }}
+              {{ if columns|length OR custom_columns }}
+                {{ relate:page }}
+                  <li {{ if {is_active} }}class="active"{{ /if }}>
+                    <a
+                      href          = "{{ url }}"
+                      class         = "dropdown-toggle"
+                      role          = "button"
+                    {{ if data_toggle_dropdown }}
+                      data-toggle   = "dropdown"
+                    {{ /if }}
+                      aria-haspopup = "true"
+                      aria-expanded = "false"
+                    >
+                      {{ title|upper }} <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu {{ if url === '/contact' }}dropdown-menu-right{{ /if }}">
+                      {{ if columns }}
+                        {{ relate:columns }}
+                          <div class="display-table-cell">
+                          <a href="{{ url }}"><span class="submenu-heading">{{ title|upper }}</span></a>
+
+                            <ul>
+                              {{ nav from="{url}" }}
+                                <li {{ if {is_active} }}class="active"{{ /if }}>
+                                  <a href="{{ url }}">{{ title }}</a>
+                                </li>
+                              {{ /nav }}
+                            </ul>
+                          </div>
+                        {{ /relate:columns }}
+                      {{ /if }}
+
+                      {{ if custom_columns }}
+                        {{ custom_columns }}
+                            <div class="display-table-cell">
+                              <span class="submenu-heading">{{ value|upper }}</span>
+
+                              <ul>
+                                {{ pages:listing folder="/services*" conditions="custom_nav:{value}" }}
+                                  <li {{ if {is_active} }}class="active"{{ /if }}>
+                                    <a href="{{ url }}">{{ title }}</a>
+                                  </li>
+                                {{ /pages:listing }}
+                              </ul>
+                            </div>
+                        {{ /custom_columns }}
+                      {{ /if }}
+                    </ul>
+                  </li>
+                {{ /relate:page }}
+
+              {{ else }}
+                {{ relate:page }}
+                  <li {{ if {is_active} }}class="active"{{ /if }}>
+                    <a href="{{ url }}">{{ title|upper }}</a>
+                  </li>
+                {{ /relate:page }}
+              {{ /if }}
+            {{ /nav_primary }}
+          {{ /get_content }}
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

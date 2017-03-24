@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>News and Events from {{ segment_3|deslugify|title }}</h1>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-9 entries-listing">
+      {{ entries:listing
+          from     = "{segment_1}"
+          limit    = "4"
+          paginate = "true"
+          since    = "first day of {segment_3|deslugify} midnight"
+          until    = "last day of {segment_3|deslugify} 23:59"
+      }}
+        {{ theme:partial
+            src         = "listings/entry"
+            use_context = "true"
+        }}
+      {{ /entries:listing }}
+
+      <nav class="clearfix">
+        <ul class="pagination pagination-lg pull-right">
+          {{ entries:pagination
+              from     = "{segment_1}"
+              limit    = "4"
+              since    = "first day of {segment_3|deslugify} midnight"
+              until    = "last day of {segment_3|deslugify} 23:59"
+          }}
+            {{ theme:partial
+                src         = "entries/pagination"
+                use_context = "true"
+            }}
+          {{ /entries:pagination }}
+        </ul>
+      </nav>
+    </div>
+
+    <aside class="col-xs-12 col-sm-3">
+      {{ theme:partial src="entries/sidebar" }}
+    </aside>
+  </div>
+</div>

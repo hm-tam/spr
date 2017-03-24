@@ -1,0 +1,21 @@
+---
+first_name: Milo
+last_name: Shoberg
+name_suffix: Mr
+email: miloshoberg@hotmail.com
+organization: Patient
+phone: "6128502736"
+pager: ""
+address_1: 411 oakcrest avenue
+address_2: ""
+city: Roseville
+state: MN
+zip: "55113"
+comments: |
+  Hello, I received an MRI from you in 2015.  I was wondering how I could obtain a copy of the images and MRI report.
+  Thank you,  Milo
+patient_interests:
+  - Please send me information by regular mail.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

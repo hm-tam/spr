@@ -1,0 +1,19 @@
+---
+first_name: Nikki
+last_name: Klein
+name_suffix: Klein
+email: nikkiklein@live.com
+organization: Entira
+phone: "6513071112"
+pager: "6513071112"
+address_1: 6444 Birch St Apt 103
+address_2: ""
+city: North Branch
+state: MN
+zip: "55056"
+comments: I would like a copy of my MRI from 8/2/16 emailed to me at the above email as soon as it is available please.
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

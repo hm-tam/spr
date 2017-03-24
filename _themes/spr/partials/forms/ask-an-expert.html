@@ -1,0 +1,82 @@
+<div id="ask-an-expert">
+  {{ if {raven:success} }}
+    <h2 class="text-success">Your form was successfully submitted.</h2>
+    {{ raven:submission }}
+      <ul class="list-unstyled alert alert-success">
+        <li><b>Specialty:</b> {{ specialty }}</li>
+        <li><b>Name:</b> {{ name }}</li>
+        <li><b>Email:</b> {{ email }}</li>
+        <li><b>Message:</b> {{ message }}</li>
+      </ul>
+    {{ /raven:submission }}
+
+
+
+
+  {{ else }}
+    {{ if {raven:has_errors} }}
+      <h2 clas="text-danger">Looks like something went wrong.</h2>
+      <ul>
+        {{ raven:errors }}
+          {{ missing }}
+            <li class="alert alert-danger">{{ field }} is required</li>
+          {{ /missing }}
+
+          {{ invalid }}
+            <li class="alert alert-danger">{{ field }}: {{ message }}</li>
+          {{ /invalid }}
+
+        {{ /raven:errors }}
+      </ul>
+    {{ /if }}
+
+    {{ raven:form
+        formset      = "ask_an_expert"
+        return       = "{current_url}#ask-an-expert"
+        error_return = "{current_url}#ask-an-expert"
+    }}
+      <div class="form-group">
+        <!-- <label for="specialty">Specialty<span class="label-req">*</span></label> -->
+
+        <select name="specialty" id="specialty" class="form-control">
+          {{ get_content from="/contact/ask-an-expert" show_drafts="true" }}
+            {{ specialties }}
+              <option value="{{ specialty }}">{{ specialty }}</option>
+            {{ /specialties }}
+          {{ /get_content }}
+        </select>
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="name">Name</label> -->
+        <input type="text" name="name" id="name" placeholder="Your Name" class="form-control">
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="email">Email<span class="label-req">*</span></label> -->
+        <input
+          type        = "email"
+          name        = "email"
+          id          = "email"
+          placeholder = "Your Email Address"
+          class       = "form-control"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <!-- <label for="message">Question(s)<span class="label-req">*</span></label> -->
+        <textarea
+          name        = "message"
+          id          = "message"
+          class       = "form-control"
+          rows        = "3"
+          placeholder = "Question(s)"
+          required
+        >{{ value:message }}</textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg center-block">Submit</button>
+    {{ /raven:form }}
+  {{ /if }}
+</div>

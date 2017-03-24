@@ -1,0 +1,35 @@
+<a href="#nav_primary" class="sr-only">Skip to primary navigation</a>
+<a href="#content" class="sr-only">Skip to content</a>
+
+{{ get_content from="/globals" show_drafts="true" }}
+  <nav class="navbar navbar-inverse navbar-static-top hidden-xs nav-quick-links">
+    <h1 class="hidden">{{ _site_name }}</h1>
+<div class="container">
+  
+      <ul class="nav navbar-nav pull-right navbar-nav-social">
+        <li>
+          <a target="_blank" href="{{ facebook_url|urldummy }}"><span class="icon icon-facebook"></span></a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/{{ twitter_username }}">
+            <span class="icon icon-twitter"></span>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="{{ youtube_url|urldummy }}"><span class="icon icon-youtube-play"></span></a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{ quick_links }}
+          {{ if external_link }}
+            <li><a href="{{ external_link|urldummy }}">{{ label }}</a></li>
+          {{ else }}
+            <li><a href="{{ link }}">{{ label }}</a></li>
+          {{ /if }}
+        {{ /quick_links }}
+      </ul>
+</div>
+  </nav>
+{{ /get_content }}
+

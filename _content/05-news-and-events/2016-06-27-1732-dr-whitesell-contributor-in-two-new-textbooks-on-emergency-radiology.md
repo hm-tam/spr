@@ -1,0 +1,10 @@
+---
+title: 'Dr. Whitesell: Contributor in Two New Textbooks on Emergency Radiology.'
+img_primary: /assets/img/news-and-events/emergency-radiology-covers.png
+category: News
+tags:
+  - doctors
+  - news
+---
+<p><a href="http://www.stpaulradiology.com/our-team/ryan-t-whitesell-md"><img src="/assets/img/news-and-events/Ryan+T+Whitesell+MD.jpg" alt="Dr. Ryan Whitesell" style="float: right; margin: 0px 0px 10px 10px;"></a></p><p>Please join us in congratulating <a href="http://www.stpaulradiology.com/our-team/ryan-t-whitesell-md">Dr. Ryan Whitesell</a> on his contributions for two recently published textbooks in emergency radiology. <a href="http://www.stpaulradiology.com/our-team/ryan-t-whitesell-md">Dr. Whitesell</a>, along with two former colleagues from Massachusetts General Hospital, provided in-depth knowledge and best practices for chest trauma patients in <a href="https://www.amazon.com/Emergency-Radiology-Requisites-2e/dp/0323376401?ie=UTF8&refRID=0MV28RXHG8G5R0M1KYE1&ref_=pd_rhf_gw_p_img_9">Emergency Radiology: The Requisites, 2nd Edition, by Jorge A. Soto and Brian C. Lucey</a>; and information on malpositioned lines and tubes in <a href="https://www.amazon.com/Emergency-Radiology-Cases/dp/0199941173/ref=sr_1_1?s=books&ie=UTF8&qid=1466428161&sr=1-1">Emergency Radiology (Rotations in Radiology), 1st Edition, by Hani H. Abujudeh</a>.</p><p><a href="http://www.stpaulradiology.com/our-team/ryan-t-whitesell-md">Dr. Whitesell</a> is a body imaging specialist at St. Paul Radiology. He earned his medical degree from Washington University School of Medicine,  performed his residency at Indiana University School of Medicine, and fellowship at Massachusetts General Hospital. He is a member of the American Board of Radiology and licensed to practice in Minnesota, Wisconsin and North Dakota.</p><p>St. Paul Radiology has been at the forefront of the imaging profession since Dr. Edward Schons brought the first radiology services to St. Paul in 1920. Today, our physicians continue that tradition of excellence by passing their extensive knowledge on to the next generation of medical imaging professionals.
+</p>

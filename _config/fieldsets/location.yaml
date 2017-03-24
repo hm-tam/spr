@@ -1,0 +1,80 @@
+title: Location
+
+fields:
+  content:
+    type: hidden
+
+  _template:
+    type: hidden
+    default: pages/location
+
+
+  section_general_info:
+    display: General Info
+    type: section
+
+  img_primary:
+    type: file
+    max_files: 1
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    destination: assets/img/contact
+
+  contact_info:
+    type: grid
+    fields:
+      label:
+      info:
+        type: redactor
+        options:
+          buttons:
+            - bold
+            - italic
+            - link
+            - html
+        width: 75%
+
+  additional_info:
+    type: grid
+    fields:
+      label:
+      info:
+        type: redactor
+        width: 75%
+
+
+  section_map:
+    display: Map
+    type: section
+
+  map:
+    instructions:
+      below: |
+        1. Open Google Maps.
+        2. Make sure the map or Street View image you'd like to embed shows up on the map.
+        3. In the top left corner, click the menu ​icon.
+        4. Click Share or embed map.
+        5. At the top of the box that appears, choose the Embed map tab.
+        6. Leave the size at medium, then copy the code and paste it here.
+
+  printable_map_and_directions:
+    type: redactor
+    image_dir: assets/img/contact
+    file_dir: assets/files/contact
+    options:
+      buttons:
+        - formatting
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - outdent
+        - indent
+        - image
+        - file
+        - link
+        - horizontalrule
+        - html

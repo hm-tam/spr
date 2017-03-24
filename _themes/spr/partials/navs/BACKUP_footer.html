@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      {{ get_content from="/contact" }}
+        <img
+          src      = "/_themes/spr/img/blank.png"
+          data-src = "{{ transform
+                        src   = '/_themes/spr/img/logo-white-on-grey.png'
+                        width = '300'
+                    }}"
+          alt      = "St. Paul Radiology logo"
+        >
+        <div class="clearfix">
+          <span class="glyphicon glyphicon-map-marker pull-left"></span>
+          <div class="pull-left">
+            <!-- <a href="{{ url }}">Administration Office</a> -->
+            <a href="https://www.google.com/maps/place/St.+Paul+Radiology+%E2%80%93+Administration/@44.9474726,-93.0901909,17z/data=!3m1!4b1!4m2!3m1!1s0x87f7d54f8f7fb8cb:0x5d119c3c8a08d49e">Administration Office</a>
+            {{ admin_address }}
+          </div>
+        </div>
+
+        <ul class="list-unstyled">
+          <li>
+            <span class="glyphicon glyphicon-earphone"></span>
+            {{ appointments_phone }} - Appointments
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-earphone"></span> {{ admin_phone }} - Administration
+          </li>
+          <li><span class="glyphicon glyphicon-print"></span> {{ fax }} - Fax</li>
+          <li>
+            <span class="glyphicon glyphicon-envelope"></span>
+            <a href="mailto:{{ email }}">{{ email }}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-3">
+        <h1 class="h4">Billing</h1>
+        <ul class="list-unstyled">
+          <li><span class="glyphicon glyphicon-earphone"></span> {{ billing_phone }}</li>
+          <li><span class="glyphicon glyphicon-envelope"></span> {{ billing_email }}</li>
+          <li>
+            <span class="glyphicon glyphicon-link"></span>
+            <a href="{{ billing_url }}">{{ billing_url }}</a>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-link pull-left"></span>
+            <a href="http://www.mycdi.com/twin_cities/lung_cancer_ct_screening_for_health_fund_members/"> Visit Labor Care Union</a>
+          </li>
+        </ul>
+
+      {{ /get_content }}
+      <br>
+      <h1 class="h4">Follow Us</h1>
+      <ul class="list-inline">
+        <li><a target="_blank" href="https://www.facebook.com/stpaulradiology?_rdr=p{{ facebook_url }}"><span class="icon icon-facebook"></span></a></li>
+        <li>
+          <a target="_blank" href="https://twitter.com/StPaulRad{{ twitter_username }}">
+            <span class="icon icon-twitter"></span>
+          </a>
+        </li>
+        <li><a target="_blank" href="https://www.youtube.com/user/stpaulradiology{{ youtube_url }}"><span class="icon icon-youtube-play"></span></a></li>
+      </ul>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6">
+      <h1 class="h4">Imaging Center Locations</h1>
+      <div class="row">
+        {{ pages:listing folder="/contact/imaging-centers" }}
+          <div class="col-xs-12 col-sm-6">
+            <div class="clearfix">
+              <span class="glyphicon glyphicon-map-marker pull-left"></span>
+              <div class="pull-left">
+                <a href="{{ url }}">{{ title }} Office</a>
+                {{ contact_info }}
+                  {{ if label|lower === "address" }}
+                    {{ info }}
+                  {{ /if }}
+                {{ /contact_info }}
+              </div>
+            </div>
+          </div>
+        {{ /pages:listing }}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="navbar navbar-inverse navbar-inverse--grey">
+  <div class="container">
+    <div class="navbar-header">
+      <p class="navbar-text">&copy; {{ now|format:Y }} {{ _site_name }} | All Rights Reserved</p>
+    </div>
+
+    <div class="hidden-xs">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ _site_url }}">Home</a></li>
+        {{ get_content
+            from        = "/globals"
+            show_drafts = "true"
+        }}
+          {{ nav_primary }}
+            {{ relate:page }}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+            {{ /relate:page }}
+          {{ /nav_primary }}
+        {{ /get_content }}
+      </ul>
+    </div>
+  </div>
+</nav>

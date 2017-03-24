@@ -1,0 +1,228 @@
+{{ if {raven:success} }}
+  <h2 class="text-success">Your form was successfully submitted.</h2>
+  <p>We'll get back to you soon.</p>
+
+
+{{ else }}
+  {{ if {raven:has_errors} }}
+    <h2 clas="text-danger">Looks like something went wrong.</h2>
+    <ul>
+      {{ raven:errors }}
+        {{ missing }}
+          <li class="alert alert-danger">{{ field }} is required</li>
+        {{ /missing }}
+
+        {{ invalid }}
+          <li class="alert alert-danger">{{ field }}: {{ message }}</li>
+        {{ /invalid }}
+
+      {{ /raven:errors }}
+    </ul>
+  {{ /if }}
+
+  {{ raven:form formset="apply_for_a_position" files="true" }}
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="first_name">First Name <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "first_name"
+          id    = "first_name"
+          value = "{{ value:first_name }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="last_name">Last Name <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "last_name"
+          id    = "last_name"
+          value = "{{ value:last_name }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="name_suffix">Suffix</label>
+        <input
+          type  = "text"
+          name  = "name_suffix"
+          id    = "name_suffix"
+          value = "{{ value:name_suffix }}"
+          class = "form-control"
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="email">Email Address <span class="label-req">*</span></label>
+        <input
+          type  = "email"
+          name  = "email"
+          id    = "email"
+          value = "{{ value:email }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="organization">Organization <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "organization"
+          id    = "organization"
+          value = "{{ value:organization }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="phone">Telephone <span class="label-req">*</span></label>
+        <input
+          type  = "tel"
+          name  = "phone"
+          id    = "phone"
+          value = "{{ value:phone }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="pager">Pager Number</label>
+        <input
+          type  = "text"
+          name  = "pager"
+          id    = "pager"
+          value = "{{ value:pager }}"
+          class = "form-control"
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="address_1">Address 1 <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "address_1"
+          id    = "address_1"
+          value = "{{ value:address_1 }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="address_2">Address 2</label>
+        <input
+          type  = "text"
+          name  = "address_2"
+          id    = "address_2"
+          value = "{{ value:address_2 }}"
+          class = "form-control"
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="city">City <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "city"
+          id    = "city"
+          value = "{{ value:city }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="state">State <span class="label-req">*</span></label>
+        <select class="form-control" name="state" id="state">
+          {{ theme:partial
+              src         = "forms/options-states"
+              use_context = "true"
+          }}
+        </select>
+      </div>
+
+      <div class="col-sm-4">
+        <label for="zip">Zip Code <span class="label-req">*</span></label>
+        <input
+          type="text"
+          name="zip"
+          id="zip"
+          value="{{ value:zip }}"
+          class="form-control"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-sm-6">
+        <label for="position">What position are you applying for: <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "position"
+          id    = "position"
+          value = "{{ value:position }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="coverletter">Cover Letter <span class="label-req">*</span></label>
+      <textarea
+        name  = "coverletter"
+        id    = "coverletter"
+        rows  = "8"
+        class = "form-control"
+        required
+      >{{ value:coverletter }}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="resume">Resume of CV <span class="label-req">*</span></label>
+      <textarea
+        name  = "resume"
+        id    = "resume"
+        rows  = "8"
+        class = "form-control"
+        required
+      >{{ value:resume }}</textarea>
+    </div>
+
+    <div class="row form-group">
+      <div class="col-sm-6">
+        <label for="upload">Upload Resume or CV: <span class="label-req">*</span></label>
+        <input
+          type  = "file"
+          name  = "upload"
+          id    = "upload"
+          value = "{{ value:upload }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+  {{ /raven:form }}
+{{ /if }}

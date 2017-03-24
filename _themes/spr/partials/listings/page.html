@@ -1,0 +1,18 @@
+
+  <h2 class="h1 center"><a href="{{ url }}">{{ title|upper }}</a></h2>
+  <a href="{{ url }}">
+    <img
+      src      = "/_themes/spr/img/blank.png"
+      data-src = "{{ transform
+                      src   = '{img_primary}'
+                      width = '400'
+                  }}"
+    >
+  </a>
+
+  <p>{{ listing_description or content|striptags|truncate:200 }}</p>
+
+  <a href="{{ url }}" class="btn btn-primary center-block">
+    Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>

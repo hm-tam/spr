@@ -1,0 +1,12 @@
+fields:
+  email_recipient:
+
+  content:
+    type: redactor
+    image_dir: assets/img
+    file_dir: assets/files
+
+
+
+
+hide: true

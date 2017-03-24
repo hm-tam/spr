@@ -1,0 +1,106 @@
+<ul class="nav nav-tabs nav-tabs-box" role="tablist">
+  <li role="presentation" class="active">
+    <a href="#recent" role="tab" data-toggle="tab" aria-controls="recent">Recent</a>
+  </li>
+  <li role="presentation">
+    <a href="#archive" role="tab" data-toggle="tab" aria-controls="archive">Archive</a>
+  </li>
+</ul>
+
+<div class="tab-content tab-content-box">
+  <div role="tabpanel" class="tab-pane fade in active" id="recent" aria-labelledby="recent">
+    {{ entries:listing
+        folder        = "{segment_1}"
+        limit         = "100"
+        group_by_date = "F Y"
+    }}
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">
+          <a href="{{ url }}">
+            <img
+              src      = "/_themes/spr/img/blank.png"
+              data-src = "{{ transform
+                              src    = '{img_primary}'
+                              width  = '100'
+                              height = '100'
+                              action = 'smart'
+                          }}"
+            >
+          </a>
+        </div>
+
+        <div class="col-xs-6 col-sm-8">
+          <h1 class="h6"><a href="{{ url }}">{{ title }}</a></h1>
+          <time datetime="{{ date|format:c }}">{{ date format="M j, Y" }}</time>
+        </div>
+      </div>
+    {{ /entries:listing }}
+  </div>
+
+
+  <div role="tabpanel" class="tab-pane fade" id="archive" aria-labelledby="profile-tab">
+    <ul>
+      {{ entries:listing
+          folder        = "{segment_1}"
+          limit         = "100"
+          group_by_date = "F Y"
+      }}
+        {{ if grouped_date }}
+          <li><a href="/news-and-events/from/{{ grouped_date|slugify }}">{{ grouped_date }}</a></li>
+        {{ /if }}
+      {{ /entries:listing }}
+    </ul>
+  </div>
+</div>
+
+
+
+
+<h2 class="h6">Categories</h2>
+<ul class="list-unstyled taxonomies">
+  {{ taxonomy:listing
+      type     = "category"
+      folder   = "{segment_1}"
+      sort_by  = "count"
+      sort_dir = "asc"
+  }}
+    <li><a href="{{ url }}">
+      <span class="glyphicon glyphicon-play-circle"></span> {{ name|title }} ({{ results }})</a>
+    </li>
+  {{ /taxonomy:listing }}
+</ul>
+<h2 class="h6">Tags</h2>
+<ul class="list-unstyled taxonomies">
+  {{ taxonomy:listing
+      type     = "tags"
+      folder   = "{segment_1}"
+      sort_by  = "count"
+      sort_dir = "asc"
+  }}
+    <li><a href="{{ url }}">
+      <span class="glyphicon glyphicon-play-circle"></span> {{ name|title }} ({{ results }})</a>
+    </li>
+  {{ /taxonomy:listing }}
+</ul>
+
+
+
+
+{{ get_content from="/" }}
+  {{ if twitter_widget_code }}
+    <h2 class="h6">Recent Tweets</h2>
+    {{ twitter_widget_code }}
+  {{ elseif current_member:is_admin }}
+    <h2 class="h6">Recent Tweets</h2>
+    <p>
+      <a href="/admin.php/publish?path=page" class="btn btn-default btn-lg btn-block">
+        Add recent tweets
+      </a>
+    </p>
+    <div class="alert alert-info">
+      <p>
+        The entire Recent Tweets section remains hidden from non-admins unless you embed tweets.
+      </p>
+    </div>
+  {{ /if }}
+{{ /get_content }}

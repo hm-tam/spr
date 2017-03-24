@@ -1,0 +1,9 @@
+---
+title: Epidural Steroid Injection Safety
+img_primary: /assets/img/news-and-events/Epidural Steroid Injection.jpg
+category: News
+tags:
+  - medicine
+  - news
+---
+<h4>To Our Patients and Referring Providers:</h4><p>In light of national media attention regarding meningitis caused by a medication used during epidural steroid injection, the physicians and staff of St. Paul Radiology Imaging Centers would like to provide some important information. The Centers for Disease Control and Prevention (CDC) and U.S. Food and Drug Administration (FDA) issued a warning related to an injectable steroid medication manufactured by the New England Compounding Center in Framingham, Massachusetts. See the attached link from the Minnesota Department of Health (MDH)</p><p><u><a href="http://www.health.state.mn.us/news/pressrel/2012/meningitis100412.html">http://www.health.state.mn.us/news/pressrel/2012/m...</a></u><a href="http://www.health.state.mn.us/news/pressrel/2012/meningitis100412.html"></a></p><p>The physicians of St. Paul Radiology Imaging Centers have never used any products from New England Compounding Center in Framingham, Massachusetts. Furthermore, our local supplier does not have any relationship with the manufacturer mentioned above.</p><p>The physicians of St. Paul Radiology use only FDA regulated steroid medications for pain management procedures. It is important to note that millions of people a year receive epidural steroid injections safely and with excellent results in their neck, back, knees and shoulders. Our highly skilled team of physicians focuses on outstanding care with safety our number one priority. If you have any additional questions, please do not hesitate to call us.</p><p>Thank you for entrusting St. Paul Radiology with all your imaging services.<span></span><br></p>

@@ -1,0 +1,11 @@
+---
+email: brittany@holmesmillet.com
+first_name: Brittany
+last_name: Johnson
+password: ""
+password_hash: $2a$08$FmeQaZCUENwa/3ApSfDqCuETD43jU/pFGhuQ/RdRXnL54rW1DUiMu
+roles:
+  - member
+  - admin
+_uid: 8PBB1Y560ee356eb1cbHWx0dF8J
+---

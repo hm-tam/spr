@@ -1,0 +1,36 @@
+{{#
+    # Vars
+    name     string  Radio group name.
+    value    integer The current value for this radio group.
+    required boolean Whether this field is required.
+#}}
+
+
+
+
+<div>
+  <label class="radio-inline">
+    <input type="radio" name="{{ name }}" value="1" {{ if value === "1" }}checked{{ /if }} {{ if required }}required{{ /if }}>
+    1 - Significantly Below
+  </label>
+
+  <label class="radio-inline">
+    <input type="radio" name="{{ name }}" value="2" {{ if value === "2" }}checked{{ /if }}>
+    2 - Below
+  </label>
+
+  <label class="radio-inline">
+    <input type="radio" name="{{ name }}" value="3" {{ if value === "3" }}checked{{ /if }}>
+    3 - Met
+  </label>
+
+  <label class="radio-inline">
+    <input type="radio" name="{{ name }}" value="4" {{ if value === "4" }}checked{{ /if }}>
+    4 - Above
+  </label>
+
+  <label class="radio-inline">
+    <input type="radio" name="{{ name }}" value="5" {{ if value === "5" }}checked{{ /if }}>
+    5 - Significantly Above
+  </label>
+</div>

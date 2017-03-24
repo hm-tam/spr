@@ -1,0 +1,47 @@
+title: Standard Page
+
+fields:
+  img_primary:
+    display: Primary Image
+    type: file
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+    instructions: >
+      Choose an image to represent this page when listed on other pages, such as the homepage.
+    destination: assets/img
+
+  content:
+    type: redactor
+    image_dir: assets/img
+    file_dir: assets/files
+
+  redirection:
+    type: suggest
+    max_items: 1
+    allow_blank: true
+    content:
+      folder: /
+      type: pages
+      conditions: "title: !404"
+    instructions: >
+      Use this only if this page shouldn't have any unique content, but it should redirect a user
+      to another page when they visit it. This is useful for adding arbitrary pages in arbitrary
+      sub-menus in the primary navigation (e.g. About > Our Team -> Our Team).
+
+  external_redirection:
+    instructions:
+      above: >
+        Use this for the same reasons as the above Redirection field, but for links that are not on
+        this site. Make sure you format the URL correctly.
+      below: Ex. https://google.com NOT google.com
+
+  listing_description:
+    type: textarea
+    height: 100
+    instructions: >
+      This appears on listing pages like For Patients. If left blank, a truncated version of the
+      content field above will be used.

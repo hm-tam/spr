@@ -1,0 +1,37 @@
+---
+_fieldset: service
+title: Pain Management Injections
+img_primary: /assets/img/services/pain-managament.jpg
+sections:
+  - 
+    type: set_section
+    section_title: General Info
+    section_img: /assets/img/services/pain-managament-20160121191643.jpg
+    section_content: '<h3>General Information About Pain Management Injections</h3><p>Pain Management Injections provide long-term pain relief by delivering a combination of local anesthetic and steroid to an area in the body that is the source of pain, using image guidance to ensure proper needle placement.</p><p>The physicians and staff of St. Paul Radiology are pleased to provide you with answers to questions you may have about your injection. This information will help ensure a positive experience when you are a patient for a pain management injection procedure.<br></p>'
+  - 
+    type: set_section
+    section_title: Questions
+    section_img: /assets/img/services/SPR Doctors-20151020114839.jpg
+    section_content: '<h3>Questions About Pain Management Injection</h3><hr><p><strong><i>Question: What is a pain management injection?</i></strong></p><p>Answer: There are several types of pain management injections. Spinal injections, including epidural steroid, sacroiliac joint, and facet injections, provide long-term pain relief by delivering a combination of local anesthetic and steroids to an area in the spinal column or pelvis that is the source of pain. Joint injections are also performed to provide pain relief. Your procedure will be performed by a Board Certified Radiologist with Fluoroscopic X-ray guidance to ensure proper needle placement.</p>Injections performed at St. Paul Radiology:<ul><li>Arthrography</li><li>Epidural Steroidal Injection (Transforaminal Approach)</li><li>Cervical</li><li>Thoracic</li><li>Lumbar</li><li>Extremity Joint Injection</li><li>Facet Joint Injection</li><li>MRI Arthrography</li><li>Sacroiliac Joint Steroid Injection</li><li>Selective Nerve Root Block</li><li>Trigger Point Injection</li></ul><hr><p><strong><i>Question: Are there medication restrictions for this procedure?</i></strong></p><p>Answer: Yes. If you are on Coumadin, Heparin or Plavix, you will need to discontinue this medication prior to your procedure. You must consult your physician for approval before you stop taking your medication.</p><hr><p><strong><i>Question: Can I eat or drink before my procedure?</i></strong></p><p>Answer: You may consume only clear liquids for three hours prior to your exam. Medications other than those mentioned above may be taken with water. If you have diabetes, please follow your normal insulin schedule.</p><hr><p><strong><i>Question: How much time should I allow?</i></strong></p><p>Answer: Procedures typically take 30 minutes, but may vary depending on the injection ordered. Following your procedure, you will be monitored for at least 15 minutes before you can leave our imaging center.</p><hr><p><strong><i>Question: What should I wear to my procedure?</i></strong></p><p>Answer: Please wear comfortable clothing without metal zippers or other metal fasteners. For some procedures you may be asked to change into a cloth gown. Lockers are available to store your personal belongings.</p><hr><p><strong><i>Question: What should I bring to my procedure?</i></strong></p><p>Answer: Please bring all recent film studies and reports that relate to this procedure (MRI, CT, etc.) if they were not performed at St. Paul Radiology. The radiologist will need this information to perform your procedure.</p><p>Please bring your insurance card. Your insurance company will be billed for the procedure. You will receive a bill for any co-pay or non-covered expenses from St. Paul Radiology Outpatient Imaging.</p><p>You must bring a driver to take you home after your injection.</p><hr><p><strong><i>Question: Will the injection be painful?</i></strong></p><p>Answer: The amount and degree of discomfort that you will experience is highly variable depending on the injection that was ordered. Every attempt is made to maximize your comfort during the course of the procedure.</p><hr><p><strong><i>Question: How does the procedure work?</i></strong></p><p>Answer: X-ray is used to guide the placement of a needle to the area of pain in your body. Medication is then injected into the problem area. Please keep in mind that it may take up to one week before the medication takes effect. You can expect a call from our nurse within that time.</p><hr><p><strong><i>Question: How will I feel after the procedure?</i></strong></p><p>Answer: You will be able to move about freely, but may want to perform only light activity for the remainder of the day. You must bring a driver to take you home after your injection.</p><hr><p><strong><i>Question: Should I see the radiologist for ongoing pain management care?</i></strong></p><p>Since you have been referred for pain relief, you may be scheduled for one or a series of injections. Once you have completed your pain management injection(s), you should follow-up with your primary physician for ongoing care. You will need a referral from your primary physician for future pain management injections.<br></p>'
+  - 
+    type: set_section
+    section_title: Select Procedures
+    section_img: /assets/img/services/pain-managament-20160121191653.jpg
+    section_content: '<h3>Select Procedures</h3><hr><p><strong>Epidural Steroid Injection</strong></p><p>An epidural steroid injection (ESI) is a minimally invasive procedure that can help relieve neck, arm, back, and leg pain caused by inflamed spinal nerves. ESI may be performed to relieve pain caused by spinal stenosis, spondylolysis, or disc herniation. Medicines are delivered to the spinal nerve through the epidural space, the area between the protective covering of the spinal cord and vertebrae. Pain relief may last for several days or even years. The goal is to reduce pain so that you may resume normal activities.</p><hr><p><strong>Transforaminal Epidural Injection</strong></p><p>Like an epidural steroid injection a transforaminal injection is a minimally invasive procedure that can help relieve neck, arm, back, and leg pain caused by inflamed spinal nerves.  Transforaminal injections are performed for the same reasons as an ESI including pain relief pain caused by spinal stenosis, spondylolysis, or disc herniation. Medicines are delivered to the spinal nerve through what is normally a smaller needle, via a different approach to the area between the protective covering of the spinal cord and vertebrae. Pain relief may last for several days or even years. The goal is to reduce pain so that you may resume normal activities.<br></p>'
+  - 
+    type: set_section
+    section_title: Procedure Preparation Info
+    section_img: /assets/img/services/pain-managament-20160121191702.jpg
+    section_content: '<h3>Download Procedure Preparation Information</h3><ul><li><a href="http://spr.lionsmouth.digital/assets/files/Procedure%20Info%20-%20Pain%20Management.pdf" target="_blank"></a><a href="/assets/files/Procedure Prep Info - Pain Management-20161007145445.pdf" target="_blank">Pain Management Procedure Preparation</a></li></ul>'
+custom_nav: Ancillary Services
+description: Pain Management Injections provide long-term pain relief by delivering a combination of local anesthetic and steroid to an area in the body that is the source of pain.
+one_sentence_summary: Using imaging for injection placement to manage pain.
+_template: services/service
+---
+
+
+
+
+
+
+

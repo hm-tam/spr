@@ -1,0 +1,40 @@
+<div class="container">
+  <h1 class="title"><a href="{{ url }}">{{ title }}</a></h1>
+  {{ content }}
+
+  <div class="row">
+    {{ pages:listing }}
+      <div class="col-xs-12 col-sm-4 narrow">
+        <h2 class="h1 center"><a href="{{ url }}">{{ title|upper }} SERVICES</a></h2>
+        <p class="text-muted text-center"><i>{{ description }}</i></p>
+        <a href="{{ url }}">
+          <img
+            src      = "/_themes/spr/img/blank.png"
+            data-src = "{{ transform
+                            src    = '{img_primary}'
+                            width  = '360'
+                            height = '180'
+                            action = 'smart'
+                        }}"
+          >
+        </a>
+
+        <p>
+          {{ content|truncate:400 }}
+        </p>
+        <ul class="service-list">
+          <strong>{{ title }} Services</strong>
+          {{ nav from="{url}" }}
+            <li><a href="{{ url }}">{{ title }}</a></li>
+          {{ /nav }}
+        </ul>
+        <hr>
+
+          <a href="{{ url }}" class="btn btn-primary">
+            Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        
+      </div>
+    {{ /pages:listing }}
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<li class="h4 {{ if is_current OR is_parent }}active{{ /if }}">
+  <a href="{{ url }}">
+    {{ title }} {{ if is_current }}<span class="sr-only">(current)</span>{{ /if }}
+  </a>
+</li>
+
+
+{{ children }}
+  {{ if children }}
+    <li>
+      <a href="{{ url }}" class="h4">{{ title }}</a>
+      <ul>
+        {{ children }}
+          <li {{ if is_current }}class="active"{{ /if }}><a href="{{ url }}">{{ title }}</a></li>
+        {{ /children }}
+      </ul>
+    </li>
+
+  {{ else }}
+    <li {{ if is_current }}class="active"{{ /if }}><a href="{{ url }}">{{ title }}</a></li>
+  {{ /if }}
+{{ /children }}

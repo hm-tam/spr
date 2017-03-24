@@ -1,0 +1,128 @@
+fields:
+  title:
+    display: Name
+    instructions:
+      above: Enter the teammate's full name.
+      below: Ex. David Robert Jones, Jr., M.D.
+
+  avatar:
+    type: file
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+    destination: assets/img/teammates
+
+
+  section_search_and_sort:
+    display: Search and Sort
+    type: section
+
+  sort_name:
+    instructions:
+      above: When sorting alphabetically, which name should this teammate be sorted by?
+      below: Ex. David Robert Jones, Jr., M.D. should be sorted by "Jones."
+
+  filter_letter:
+    type: suggest
+    max_items: 1
+    options:
+      - A
+      - B
+      - C
+      - D
+      - E
+      - F
+      - G
+      - H
+      - I
+      - J
+      - K
+      - L
+      - M
+      - "N"
+      - O
+      - P
+      - Q
+      - R
+      - S
+      - T
+      - U
+      - V
+      - W
+      - X
+      - "Y"
+      - Z
+    instructions:
+      above: Which letter should this teammate be filtered under?
+      below: Ex. David Robert Jones, Jr., M.D. should be sorted under "J."
+
+  practice_area:
+    type: suggest
+    create: true
+    max_items: 1000
+    multiple: true
+    taxonomy:
+      folder: our-team
+      type: practice_area
+
+
+  section_cv:
+    display: CV
+    type: section
+
+  cv:
+    display: CV
+    type: replicator
+    sets:
+      set_default:
+        display: Default
+        instructions: Use this for most sections of the CV.
+        fields:
+          label:
+          info:
+            type: redactor
+            options:
+              buttons:
+                - formatting
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - outdent
+                - indent
+                - link
+                - html
+              formatting:
+                - p
+                - h3
+                - h4
+
+      set_list_2:
+        display: Two Lists
+        instructions: Use this to display two lists, side-by-side.
+        fields:
+          label_1:
+          list_1:
+            type: grid
+            fields:
+              list_item:
+          label_2:
+          list_2:
+            type: grid
+            fields:
+              list_item:
+
+
+  content:
+    display: Short Bio
+    type: textarea
+    height: 100
+    instructions: This only gets used if the teammate gets featured on the homepage.
+
+
+
+
+hide: true

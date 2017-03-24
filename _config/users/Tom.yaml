@@ -1,0 +1,10 @@
+---
+email: tom@holmesmillet.com
+first_name: Tom
+last_name: Miller
+password: ""
+password_hash: $2a$08$EmI0PqSYMN9WyIiBVeuGO.IpeaDuhFP.iGAesgmKoG3cehGZOvhQ6
+roles:
+  - admin
+_uid: fsCwZF56a2a6ae62c1a8JGz4zJH
+---

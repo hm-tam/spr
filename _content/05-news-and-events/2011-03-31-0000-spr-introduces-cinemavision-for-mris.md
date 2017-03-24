@@ -1,0 +1,9 @@
+---
+title: SPR Introduces CinemaVision for MRIs
+img_primary: /assets/img/news-and-events/Now Showing at St Paul Radiology.jpg
+category: News
+tags:
+  - medicine
+  - news
+---
+<h4>Now Showing at St. Paul Radiology... The Ultimate MRI Comfort and Entertainment Zone</h4><p>St. Paul Radiology now offers MRI (magnetic resonance imaging) patients the ultimate comfort experience, CinemaVision at select SPR locations. This new service, is sure to delight and comfort young and old alike! Now you can bring your favorite DVD movie, watch one of our soothing DVD movies or relax to high fidelity music while undergoing your MRI screening ordered by your care provider. St. Paul Radiology, it's more than just x-rays and screenings it's about exceeding your expectations, anticipating and soothing anxieties while providing trusted radiology interpretations for you, your family and care provider.</p><p>CinemaVision was designed with pediatric and claustrophobic patients in mind, and transforms the patient comfort experience in our MRI suite. The picture quality will impress you while the headset provides optimal MRI noise reduction, two way patient communications and high quality digital audio from a variety of input sources including FM/AM radio, CD's and select MP3 players. Patients marvel at the transformation of experiences, it's amazing sound and video quality that reduces both background noise and anxieties, why settle for anything less? So when your care provider indicates you may need a magnetic resonance imaging examination, ask for St. Paul Radiology by name and bring your favorite DVD movie!</p>

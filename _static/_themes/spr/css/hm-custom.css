@@ -1,0 +1,78 @@
+/* SPR Custom Styles by HM Interactive */
+.ad .title::after {
+    border-bottom-color: #0067A9;
+}
+.top-doctors img{
+	width:40%;
+	max-width:100%;
+}
+body footer .list-inline>li{
+	padding-left:10px;
+	padding-right:10px;
+}
+body footer span.icon {
+	font-size:2.3em;
+	margin-right:0px;
+}
+body footer .col-3 p{
+	line-height:inherit;
+}
+body footer .tagline{
+    width: 55%;
+    padding-top: 90px;
+    padding-bottom: 100px;
+}
+body footer .col-3 img{
+	float:right;
+	padding:0px !important;
+}
+body footer .col-1 .h4{
+	margin-bottom:28px;
+	text-align:center;
+}
+body footer .col-1 img, 
+body footer .col-1 .list-inline {
+	margin:0 auto;
+	display:block;
+	left:0;
+	right:0;
+	text-align:center;
+}
+body footer img {
+    padding: 0px 20px 10px 0px;
+}
+#content > section:nth-child(10){
+	display:none;
+}
+#content > section:nth-child(11){
+	background-color:#ffffff;
+}
+.labor-care{
+	margin-left:-28px;
+}
+.thumbnail .caption p{
+	text-align:center;
+	padding:0px 15px;
+}
+.thumbnail{
+	max-height:535px;
+}
+#content > div > div > div:nth-child(5) > p:nth-child(4)
+@media only screen and (min-width: 749px) and (max-width: 1024px){
+	footer .container {
+	    width: 100%;
+	}
+	footer .container a{
+	    font-size:12px;
+	}
+	footer > div > div > div:nth-child(1){
+		padding-right:0px;
+	}
+}
+@media only screen and (min-width: 321px) and (max-width: 767px){
+	body > footer > div > div > div:nth-child(1),
+	body > footer > div > div > div:nth-child(2){
+		width:50%;
+		float:left;
+	}
+}

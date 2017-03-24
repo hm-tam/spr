@@ -1,0 +1,25 @@
+---
+first_name: joshua
+last_name: haeg
+name_suffix: ""
+email: joshaeg@gmail.com
+organization: patient
+phone: "6123870573"
+pager: ""
+address_1: 223 bates Ave
+address_2: '#4'
+city: St Paul
+state: MN
+zip: "55106"
+comments: |
+  Hello
+  
+  I just need an itemized pdf of the last bill i was sent.
+  
+  Thank you
+  Josh
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

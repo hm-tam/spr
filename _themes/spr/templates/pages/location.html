@@ -1,0 +1,84 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-9 col-sm-push-3">
+      <h1>{{ title }}</h1>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active">
+          <a href="#general-info" aria-controls="general-info" role="tab" data-toggle="tab">
+            General Info
+          </a>
+        </li>
+        <li role="presentation">
+          <a href="#map" aria-controls="map" role="tab" data-toggle="tab">Map</a>
+        </li>
+        <li role="presentation">
+          <a href="#directions" aria-controls="directions" role="tab" data-toggle="tab">
+            Printable Map and Directions
+          </a>
+        </li>
+      </ul>
+
+
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="general-info">
+          <img
+            src      = "/_themes/spr/img/blank.png"
+            data-src = "{{ transform
+                            src   = '{img_primary}'
+                            width = '850'
+                        }}"
+            alt        = "Photo of {{ title }}"
+          >
+
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <h2>Contact Info</h2>
+              <div class="table-responsive">
+                <table class="table">
+                  {{ contact_info }}
+                    <tr>
+                      <td>{{ label }}</td>
+                      <td>{{ info }}</td>
+                    </tr>
+                  {{ /contact_info }}
+                </table>
+              </div>
+            </div>
+
+            <div class="col-xs-12 col-md-6">
+              <h2>Additional Info</h2>
+              <div class="table-responsive">
+                <table class="table">
+                  {{ additional_info }}
+                    <tr>
+                      <td>{{ label }}</td>
+                      <td>{{ info }}</td>
+                    </tr>
+                  {{ /additional_info }}
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div role="tabpanel" class="tab-pane fade" id="map">
+          {{ map }}
+        </div>
+
+        <div role="tabpanel" class="tab-pane fade" id="directions">
+          {{ printable_map_and_directions }}
+        </div>
+      </div>
+    </div>
+
+
+
+
+    {{ theme:partial
+        src     = "navs/subpage-sidebar"
+        from    = "/contact/imaging-centers"
+        heading = "Imaging Centers"
+    }}
+  </div>
+</div>

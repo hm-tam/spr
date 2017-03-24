@@ -1,0 +1,149 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-1">
+      {{ get_content from="/contact" }}
+        <img
+          src      = "/_themes/spr/img/blank.png"
+          data-src = "{{ transform
+                        src   = '/_themes/spr/img/spr-white-logo-2X.png'
+                        width = '300'
+                    }}"
+          alt      = "St. Paul Radiology logo"
+        >
+        <img class="tagline" src="/_themes/spr/img/spr-white-tagline-2X.png"/>
+        <h1 class="h4">Follow Us</h1>
+        <ul class="list-inline">
+          <li><a target="_blank" href="https://www.facebook.com/stpaulradiology?_rdr=p{{ facebook_url }}"><span class="icon icon-facebook"></span></a></li>
+          <li>
+            <a target="_blank" href="https://twitter.com/StPaulRad{{ twitter_username }}">
+              <span class="icon icon-twitter"></span>
+            </a>
+          </li>
+          <li><a target="_blank" href="https://www.youtube.com/user/stpaulradiology{{ youtube_url }}"><span class="icon icon-youtube-play"></span></a></li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+        <h1 class="h4">Billing</h1>
+        <ul class="list-unstyled">
+          <li><span class="glyphicon glyphicon-earphone"></span> {{ billing_phone }}</li>
+          <li><span class="glyphicon glyphicon-envelope"></span> {{ billing_email }}</li>
+          <li>
+            <span class="glyphicon glyphicon-link"></span>
+            <a href="{{ billing_url }}">{{ billing_url }}</a>
+          </li>
+          <!-- <li>
+            <span class="glyphicon glyphicon-link pull-left"></span>
+            <a href="http://www.mycdi.com/twin_cities/lung_cancer_ct_screening_for_health_fund_members/">&nbsp Visit Labor Care Union</a>
+          </li> -->
+        </ul>
+
+      {{ /get_content }}
+      <br>
+      <h1 class="h4">Administration</h1>
+      <div class="clearfix">
+          <span class="glyphicon glyphicon-map-marker pull-left"></span>
+          <div class="pull-left">
+            <!-- <a href="{{ url }}">Administration Office</a> -->
+            <a href="https://www.google.com/maps/place/St.+Paul+Radiology+%E2%80%93+Administration/@44.9474726,-93.0901909,17z/data=!3m1!4b1!4m2!3m1!1s0x87f7d54f8f7fb8cb:0x5d119c3c8a08d49e">Administration Office</a>
+            {{ admin_address }}
+          </div>
+        </div>
+
+        <ul class="list-unstyled">
+          <li>
+            <span class="glyphicon glyphicon-earphone"></span>
+            {{ appointments_phone }} - Appointments
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-earphone"></span> {{ admin_phone }} - Administration
+          </li>
+          <li><span class="glyphicon glyphicon-print"></span> {{ fax }} - Fax</li>
+          <li>
+            <span class="glyphicon glyphicon-envelope"></span>
+            <a href="mailto:{{ email }}">{{ email }}</a>
+          </li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-4">
+      <h1 class="h4">Imaging Center Locations</h1>
+      <div class="row">
+          <div class="col-xs-12 col-3">
+            <div class="clearfix">
+              <div class="col-xs-12 col-sm-4">
+                <img src="/assets/img/downtown.jpg"/>
+              </div>
+              <div class="col-xs-12 col-sm-8">
+                <span class="glyphicon glyphicon-map-marker pull-left"></span>
+                <div class="pull-left">
+                  <p><a href="https://www.google.com/maps/place/250+Thompson+St,+St+Paul,+MN+55102/@44.944125,-93.1092987,17z/data=!3m1!4b1!4m2!3m1!1s0x87f62ab0adf84a4f:0x37e654bf66592a40?q=250+Thompson+Street+St.+Paul,+MN+55102&bav=on.2,or.&bvm=bv.112766941,d.amc&biw=1498&bih=1333&dpr=2&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjY_P_dy83KAhVBtYMKHd9TD00Q_AUIBigB">
+                    Downtown Campus Office<br>
+                    250 Thompson Street<br>
+                    St. Paul, MN 55102</a>
+                  </p>
+                </div>
+              </div>
+            </div><br>
+            <div class="clearfix">
+              <div class="col-xs-12 col-sm-4">
+                <img src="/assets/img/eagan.jpg"/>
+              </div>
+              <div class="col-xs-12 col-sm-8">
+                <span class="glyphicon glyphicon-map-marker pull-left"></span>
+                <div class="pull-left">
+                  <p><a href="https://www.google.com/maps/place/1185+Town+Centre+Dr+%23125,+Eagan,+MN+55123/@44.8316716,-93.1530882,17z/data=!3m1!4b1!4m2!3m1!1s0x87f62dbb8f90fa75:0x7f23a4df15062403">
+                    Eagan Office<br>
+                    1185 Town Centre Drive<br>
+                    Suite 125<br>
+                    Eagan, MN 55123</a>
+                  </p>
+                </div>
+              </div>
+            </div><br>
+            <div class="clearfix">
+              <div class="col-xs-12 col-sm-4">
+                <img src="/assets/img/maplewood.jpg"/>
+              </div>
+              <div class="col-xs-12 col-sm-8">
+                <span class="glyphicon glyphicon-map-marker pull-left"></span>
+                <div class="pull-left">
+                  <p><a href="https://www.google.com/maps/place/1723+Beam+Ave,+Maplewood,+MN+55109/@45.0297902,-93.0315828,17z/data=!3m1!4b1!4m5!3m4!1s0x52b2d406ada00873:0x12651903f5269647!8m2!3d45.0297864!4d-93.0293941">
+                    Maplewood Office<br>
+                    1723A Beam Avenue<br>
+                    Maplewood, MN 55109</a>
+                  </p>
+                </div>
+              </div>
+            </div><br>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="navbar navbar-inverse navbar-inverse--grey">
+  <div class="container">
+    <div class="navbar-header">
+      <p class="navbar-text">&copy; {{ now|format:Y }} {{ _site_name }} | All Rights Reserved</p>
+    </div>
+
+    <div class="hidden-xs">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ _site_url }}">Home</a></li>
+        {{ get_content
+            from        = "/globals"
+            show_drafts = "true"
+        }}
+          {{ nav_primary }}
+            {{ relate:page }}
+              <li><a href="{{ url }}">{{ title }}</a></li>
+            {{ /relate:page }}
+          {{ /nav_primary }}
+        {{ /get_content }}
+      </ul>
+    </div>
+  </div>
+</nav>

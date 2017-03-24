@@ -1,0 +1,127 @@
+fields:
+  slug:
+    hide: yes
+
+  content:
+    type: hidden
+
+  logo:
+    type: file
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+    destination: assets/img
+
+
+  section_nav:
+    display: Navigation
+    type: section
+
+  nav_primary:
+    display: Primary Navigation
+    type: grid
+    instructions:
+      above: Add a link for each page you want at the top-level of the navbar.
+      below: |
+        To add a link to an existing page in a different column (About > Our Team, for example):
+          1. Add a sub-page (e.g., a page called Our Team under About).
+          2. On the sub-page, choose a page to redirect to (e.g. About > Our Team -> Our Team).
+          3. Make sure to add a Column for the sub-menu (e.g. About column for About page).
+    fields:
+      page:
+        type: suggest
+        max_items: 1
+        content:
+          folder: /
+          type: pages
+          conditions: "title: !404"
+      columns:
+        type: suggest
+        content:
+          folder: *
+          type: pages
+          conditions: "title: !404"
+        instructions: >
+          Each page added here will appear in the sub-menu. Its sub-pages will also be
+          listed beneath.
+        width: 35%
+      custom_columns:
+        type: suggest
+        taxonomy:
+          folder: services/*
+          type: custom_nav
+        instructions: >
+          If you added a Primary Navigation Sub-menu Heading to a service, you can add it here to
+          list it in the primary navigation.
+        width: 35%
+
+  quick_links:
+    type: grid
+    fields:
+      label:
+        width: 20%
+      link:
+        type: suggest
+        max_items: 1
+        allow_blank: true
+        content:
+          folder: /*
+          type: pages
+          conditions: !cv
+        width: 40%
+      external_link:
+        instructions: If the linked content is from another site, paste the link here.
+    instructions: |
+      These quick links don't appear on mobile. Elsewhere they appear at the very top of the page.
+      Social links are included for you.
+
+  quick_links_mobile:
+    display: Mobile Quick Links
+    type: grid
+    fields:
+      icon:
+        type: file
+        allowed:
+          - gif
+          - jpeg
+          - jpg
+          - png
+        max_files: 1
+        destination: assets/img/icons
+        width: 20%
+
+      label:
+        width: 20%
+      link:
+        type: suggest
+        max_items: 1
+        allow_blank: true
+        content:
+          folder: /*
+          type: pages
+          conditions: !cv
+        width: 40%
+      external_link:
+        instructions: If the linked content is from another site, paste the link here.
+    instructions: These quick links appear only on mobile.
+
+
+  section_social:
+    display: Social
+    type: section
+
+  facebook_url:
+    display: Facebook URL
+
+  twitter_username:
+
+  youtube_url:
+    display: YouTube URL
+
+
+
+
+hide: true

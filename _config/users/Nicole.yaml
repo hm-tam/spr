@@ -1,0 +1,11 @@
+---
+email: nmiller@stpaulrad.com
+first_name: Nicole
+last_name: Miller
+password: ""
+password_hash: $2a$08$RDCYMHnhiPhGf99wZX/bEezAaciD45qFIgaxK9/0UO9aqcsHJCuSS
+roles:
+  - member
+  - admin
+_uid: wLnr9557042c64a65f2vPqR91kV
+---

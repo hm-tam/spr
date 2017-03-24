@@ -1,0 +1,26 @@
+---
+first_name: Cheryl
+last_name: Myers
+name_suffix: ""
+email: cheryl.myers@allina.com
+organization: Allina Health
+phone: 651-241-1816
+pager: ""
+address_1: 150 Emerson Ave. E.
+address_2: ""
+city: West St. Paul
+state: MN
+zip: "55118"
+comments: |
+  Can someone tell me who I can contact regarding coordinating a lunch and learn at our site with Dr. Anders Knutsen?
+  Dr. Anders Knutsen recently spoke to Mary Cady MD at our site and said he would come to West St. Paul regarding imaging ordering.  
+  This may be a lunch and learn or at a provider mtg.  
+  
+  Thanks for your help
+patient_interests:
+  - Please send me information by regular mail.
+send_requests:
+  - No printed information needed at this time, thank you.
+provider_requests:
+  - Please have a nurse call me.
+---

@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="col-xs-12 col-sm-9 col-sm-push-3">
+    <h1>{{ title }}</h1>
+    {{ content }}
+
+    <hr>
+
+    {{ if !segment_2 OR segment_2 == "administration" }}
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <h2>Contact</h2>
+          {{ get_content from="/contact" }}
+            <div class="clearfix">
+              <span class="glyphicon glyphicon-map-marker pull-left"></span>
+              <div class="pull-left">
+                <a href="https://www.google.com/maps/place/St.+Paul+Radiology+%E2%80%93+Administration/@44.9474726,-93.0901909,17z/data=!3m1!4b1!4m2!3m1!1s0x87f7d54f8f7fb8cb:0x5d119c3c8a08d49e"> Administration Office</a>
+                <!-- <a href="{{ url }}">Administration Office</a> -->
+                {{ admin_address }}
+              </div>
+            </div>
+          {{ /get_content }}
+
+          <ul class="list-unstyled">
+            <li>
+              <span class="glyphicon glyphicon-earphone"></span>
+              {{ appointments_phone }} - Appointments
+            </li>
+            <li>
+              <span class="glyphicon glyphicon-earphone"></span> {{ admin_phone }} - Administration
+            </li>
+            <li><span class="glyphicon glyphicon-print"></span> {{ fax }} - Fax</li>
+            <li>
+              <span class="glyphicon glyphicon-envelope"></span>
+              <a href="mailto:{{ email }}">{{ email }}</a>
+            </li>
+          </ul>
+
+
+          <h2>Billing</h2>
+          <ul class="list-unstyled">
+            <li><span class="glyphicon glyphicon-earphone"></span> {{ billing_phone }}</li>
+            <li><span class="glyphicon glyphicon-envelope"></span> {{ billing_email }}</li>
+            <li>
+              <span class="glyphicon glyphicon-link"></span>
+              <a href="{{ billing_url }}">{{ billing_url }}</a>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6">
+          <h2>Imaging Center Locations</h2>
+          {{ pages:listing folder="/contact/imaging-centers" }}
+            <div class="clearfix">
+              <span class="glyphicon glyphicon-map-marker pull-left"></span>
+              <div class="pull-left">
+                <a href="{{ url }}">{{ title }} Office</a>
+                {{ contact_info }}
+                  {{ if label|lower === "address" }}
+                    {{ info }}
+                  {{ /if }}
+                {{ /contact_info }}
+              </div>
+            </div>
+
+            <p>
+              <span class="glyphicon glyphicon-earphone pull-left"></span>
+              {{ contact_info }}
+                {{ if label|lower === "telephone" OR label|lower === "phone" }}
+                  {{ info|striptags }}
+                {{ /if }}
+              {{ /contact_info }}
+            </p>
+          {{ /pages:listing }}
+        </div>
+      </div>
+
+
+    {{ elseif segment_2 === "give-feedback" }}
+      {{ theme:partial src="forms/give-feedback" }}
+
+    {{ elseif segment_2 === "request-information" }}
+      {{ theme:partial src="forms/request-information" }}
+    {{ /if }}
+  </div>
+
+
+
+
+  {{ if segment_2 === 'imaging-centers'}}
+    {{ theme:partial
+        src  = "navs/subpage-sidebar"
+        from = "{current_url}"
+    }}
+  {{ else }}
+    {{ theme:partial
+        src  = "navs/subpage-sidebar"
+        from = "{segment_1}"
+    }}
+  {{ /if }}
+</div>

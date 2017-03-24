@@ -1,0 +1,27 @@
+title: Service Type
+
+fields:
+  img_primary:
+    display: Primary Image
+    type: file
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+    instructions: >
+      Choose an image to represent this service when listed on other pages, such as the homepage.
+    destination: assets/img/heros
+
+  content:
+    type: redactor
+    image_dir: assets/img
+    file_dir: assets/files
+
+  description:
+    instructions: This should be a very short, simple explanation of the service type.
+
+  _template:
+    type: hidden
+    default: services/type

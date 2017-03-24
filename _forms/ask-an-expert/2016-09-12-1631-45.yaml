@@ -1,0 +1,9 @@
+---
+specialty: Emergency Radiology
+name: test
+email: phamt@live.com
+message: |
+  This is a test without using Mandrill and being sent to multiple recipients.
+  
+  Can you see this email?
+---

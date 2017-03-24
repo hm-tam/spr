@@ -1,0 +1,35 @@
+<div class="container entries-listing">
+  <h1 class="title">{{ title }}</h1>
+  {{ content }}
+
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-9 entries-listing">
+      {{ entries:listing
+          limit    = "4"
+          paginate = "true"
+      }}
+        {{ theme:partial
+            src         = "listings/entry"
+            use_context = "true"
+        }}
+        <hr>
+      {{ /entries:listing }}
+
+      <nav class="clearfix">
+        <ul class="pagination pagination-lg pull-right">
+          {{ entries:pagination limit="4" }}
+            {{ theme:partial
+                src         = "entries/pagination"
+                use_context = "true"
+            }}
+          {{ /entries:pagination }}
+        </ul>
+      </nav>
+    </div>
+
+    <aside class="col-xs-12 col-sm-3">
+      {{ theme:partial src="entries/sidebar" }}
+    </aside>
+  </div>
+</div>

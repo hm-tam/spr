@@ -1,0 +1,433 @@
+{{ if {raven:success} }}
+  <h2 class="text-success">Your form was successfully submitted.</h2>
+  <p>We'll get back to you soon.</p>
+
+
+{{ else }}
+  {{ if {raven:has_errors} }}
+    <h2 clas="text-danger">Looks like something went wrong.</h2>
+    <ul>
+      {{ raven:errors }}
+        {{ missing }}
+          <li class="alert alert-danger">{{ field }} is required</li>
+        {{ /missing }}
+
+        {{ invalid }}
+          <li class="alert alert-danger">{{ field }}: {{ message }}</li>
+        {{ /invalid }}
+
+      {{ /raven:errors }}
+    </ul>
+  {{ /if }}
+
+  {{ raven:form formset="request_information" }}
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="first_name">First Name <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "first_name"
+          id    = "first_name"
+          value = "{{ value:first_name }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="last_name">Last Name <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "last_name"
+          id    = "last_name"
+          value = "{{ value:last_name }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="name_suffix">Suffix</label>
+        <input
+          type  = "text"
+          name  = "name_suffix"
+          id    = "name_suffix"
+          value = "{{ value:name_suffix }}"
+          class = "form-control"
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="email">Email Address <span class="label-req">*</span></label>
+        <input
+          type  = "email"
+          name  = "email"
+          id    = "email"
+          value = "{{ value:email }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="organization">Organization <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "organization"
+          id    = "organization"
+          value = "{{ value:organization }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="phone">Telephone <span class="label-req">*</span></label>
+        <input
+          type  = "tel"
+          name  = "phone"
+          id    = "phone"
+          value = "{{ value:phone }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="pager">Pager Number</label>
+        <input
+          type  = "text"
+          name  = "pager"
+          id    = "pager"
+          value = "{{ value:pager }}"
+          class = "form-control"
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="address_1">Address 1 <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "address_1"
+          id    = "address_1"
+          value = "{{ value:address_1 }}"
+          class = "form-control"
+          required
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="address_2">Address 2</label>
+        <input
+          type  = "text"
+          name  = "address_2"
+          id    = "address_2"
+          value = "{{ value:address_2 }}"
+          class = "form-control"
+        >
+      </div>
+
+      <div class="col-sm-4">
+        <label for="city">City <span class="label-req">*</span></label>
+        <input
+          type  = "text"
+          name  = "city"
+          id    = "city"
+          value = "{{ value:city }}"
+          class = "form-control"
+          required
+        >
+      </div>
+    </div>
+
+
+    <div class="row form-group">
+      <div class="col-sm-4">
+        <label for="state">State <span class="label-req">*</span></label>
+        <select class="form-control" name="state" id="state">
+          {{ theme:partial
+              src         = "forms/options-states"
+              use_context = "true"
+          }}
+        </select>
+      </div>
+
+      <div class="col-sm-4">
+        <label for="zip">Zip Code <span class="label-req">*</span></label>
+        <input
+          type="text"
+          name="zip"
+          id="zip"
+          value="{{ value:zip }}"
+          class="form-control"
+          required
+        >
+      </div>
+    </div>
+
+
+
+
+    <div class="form-group">
+      <label for="comments">Comments <span class="label-req">*</span></label>
+      <textarea
+        name  = "comments"
+        id    = "comments"
+        rows  = "8"
+        class = "form-control"
+        required
+      >{{ value:comments }}</textarea>
+    </div>
+
+
+    <div class="form-group">
+      <label>
+        I am a patient interested in learning more about the services of St. Paul Radiology, P.A.
+        <span class="label-req">*</span>
+      </label>
+
+      <div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "patient_interests[]"
+              value = "Please send me information by email."
+            >
+            Please send me information by email.
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "patient_interests[]"
+              value = "Please send me information by regular mail."
+            >
+            Please send me information by regular mail.
+          </label>
+        </div>
+
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "patient_interests[]"
+              value = "Please call me."
+            >
+            Please call me.
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label>Please Send (check all that apply) <span class="label-req">*</span></label>
+
+      <div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A map to SPR Maplewood."
+            >
+            A map to SPR Maplewood.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A map to SPR Eagan."
+            >
+            A map to SPR Eagan.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A map to SPR Downtown."
+            >
+            A map to SPR Downtown.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A map to SPR Gallery Towers."
+            >
+            A map to SPR Gallery Towers.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure- MRI."
+            >
+            A patient education brochure- MRI.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure-CT."
+            >
+            A patient education brochure-CT.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure- Ultrasound."
+            >
+            A patient education brochure- Ultrasound.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure- Pain Management Injections."
+            >
+            A patient education brochure- Pain Management Injections.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure- Mammography."
+            >
+            A patient education brochure- Mammography.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure Breast MRI."
+            >
+            A patient education brochure Breast MRI.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure- PET/CT."
+            >
+            A patient education brochure- PET/CT.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "A patient education brochure-bone densitometry."
+            >
+            A patient education brochure-bone densitometry.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "send_requests[]"
+              value = "No printed information needed at this time, thank you."
+            >
+            No printed information needed at this time, thank you.
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label>I am a healthcare provider/clinician:</label>
+      <div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "provider_requests[]"
+              value = "Please have a nurse call me."
+            >
+            Please have a nurse call me.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "provider_requests[]"
+              value = "Please have a nurse page me at."
+            >
+            Please have a nurse page me at.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "provider_requests[]"
+              value = "Please add me to your CME event mail list."
+            >
+            Please add me to your CME event mail list.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "provider_requests[]"
+              value = "Please call to schedule a clinic in-service appointment with our staff."
+            >
+            Please call to schedule a clinic in-service appointment with our staff.
+          </label>
+        </div>
+        <div class="checkbox">
+          <label>
+            <input
+              type  = "checkbox"
+              name  = "provider_requests[]"
+              value = "Please add me you your announcement mail list."
+            >
+            Please add me you your announcement mail list.
+          </label>
+        </div>
+      </div>
+    </div>
+
+
+
+    <button class="btn btn-primary">Submit</button>
+  {{ /raven:form }}
+{{ /if }}

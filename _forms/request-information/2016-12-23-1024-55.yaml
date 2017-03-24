@@ -1,0 +1,21 @@
+---
+first_name: Mary
+last_name: Powers
+name_suffix: ""
+email: powersmarya@gmail.com
+organization: none
+phone: 715-222-3221
+pager: ""
+address_1: 517 Gray St
+address_2: ""
+city: Hudson
+state: WI
+zip: "54016"
+comments: |
+  I’m looking for a price quote on an MRI that my doctor ordered for a 6cm lipoma on my right shoulder.  The code he ordered is 73221.  My insurance is Preferred One - group #PCH42954  /  ID #80215136600.   Please also let me know if your quote includes the MRI reading.
+  My doctor is at Hudson Physicians in Hudson, WI and I had an appointment setup for an MRI at the Hudson Hospital on 12/27 but I’m finding their pricing is extremely high compared to others in the area.  Therefore, I have cancelled that appointment and would like to get one set up with another facility as soon as possible.  Your downtown St. Paul facility is the location I would prefer going to.
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-9 col-sm-push-3">
+      <h1>{{ title }}</h1>
+      <ul class="nav nav-tabs">
+        {{ sections }}
+          <li role="presentation" {{ if first }}class="active"{{ /if }}>
+            <a
+              href          = "#{{ section_title|slugify|replace:,: }}"
+              aria-controls = "{{ section_title|slugify|replace:,: }}"
+              role          = "tab"
+              data-toggle   = "tab"
+            >
+              {{ section_title }}
+            </a>
+          </li>
+        {{ /sections }}
+      </ul>
+
+      <div class="tab-content">
+        {{ sections }}
+          <div
+            role  = "tabpanel"
+            class = "tab-pane fade {{ if first }}in active{{ /if }}"
+            id    = "{{ section_title|slugify|replace:,: }}"
+          >
+            <img
+              src = "{{ transform
+                            src   = '{section_img}'
+                            width = '850'
+                        }}"
+              alt = "Photo of {{ title }}"
+            >
+
+            {{ section_content }}
+          </div>
+        {{ /sections }}
+      </div>
+    </div>
+
+    {{ theme:partial
+        src     = "navs/subpage-sidebar"
+        heading = "{segment_2|deslugify|title} Services"
+        from    = "/{segment_1}/{segment_2}"
+    }}
+  </div>
+</div>

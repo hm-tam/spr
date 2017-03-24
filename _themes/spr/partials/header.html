@@ -1,0 +1,76 @@
+<div class="visible-xs mobile-gradient">
+  <a href="{{ _site_root }}">
+    <img
+      src      = "/_themes/spr/img/blank.png"
+      data-src = "{{ transform src='{globals:logo}'}}"
+      alt      = "St. Paul Radiology logo"
+    >
+  </a>
+</div>
+
+<div class="hidden-xs blue-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <a href="{{ _site_root }}">
+          <img
+            src      = "/_themes/spr/img/blank.png"
+            data-src = "{{ transform src='{globals:logo}' width='550' }}"
+            width    = "225px"
+            alt      = "St. Paul Radiology logo"
+          >
+        </a>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="row slogan text-primary">
+          <div class="col-sm-6 text-right">
+            The <b>Name</b><br>
+            You Trust.
+          </div>
+          <div class="col-sm-6">
+            The <b>Value</b><br>
+            You Deserve.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4 text-right">
+        <div class="google-custom-search-engine">
+          <script>
+            (function() {
+              var cx = '009059756030515912076:qrqzw1lb0jg';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:search></gcse:search>
+        </div>
+
+        <p>
+          <i>Physician Portal: </i>
+          <span class="glyphicon glyphicon-plus-sign"></span>
+          <a href="https://portal.stpaulrad.com/portal.web/Account/LogOn">Sign In</a>
+        </p>
+
+        <p>
+          <i>Same Day Appointments: </i>
+          <span class="glyphicon glyphicon-earphone"></span>
+            <a href="tel:651-632-5700">
+              651-632-5700
+            </a>
+         <!--  {{ get_content from="/contact" }}
+            <span class="glyphicon glyphicon-earphone"></span>
+            <a href="tel:{{ appointments_phone|replace:.|replace:- }}">
+              {{ appointments_phone }}
+            </a>
+          {{ /get_content }} -->
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

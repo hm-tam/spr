@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-9 col-xs-push-3" id="bio-info">
+
+
+
+      <table class="table table-responsive table-cv">
+        <tr>
+
+          <td colspan="4">
+            <img
+              src      = "/_themes/spr/img/blank.png"
+              data-src = "{{ transform
+                              src    = '{avatar}'
+                              width  = '270'
+                              height = '234'
+                              action = 'smart'
+                          }}"
+              alt        = "{{ title }}'s avatar'"
+              class      = "pull-right"
+            ><br><br>
+            <h1>{{ title }}</h1><br>
+            <table class="table-responsive">
+              <tr class="table-row-default">
+                <td>
+                  <h4><span style="color: #0067a6; margin-right:20px; display: inline-block;">Specialty</span></h4>
+                </td>
+                <td>
+                  <h6>{{ practice_area_sentence_list }}</h6>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        {{ cv }}
+          {{ if type === "set_default" }}
+            <tr class="table-row-default">
+              <td>
+                <h2>{{ label }}</h2>
+              </td>
+              <td colspan="3">{{ info }}</td>
+            </tr>
+
+
+          {{ elseif type === "set_list_2" }}
+            <tr class="table-row-default">
+              <td>
+                <h2>{{ label_1 }}</h2>
+              </td>
+              <td colspan="3">
+                <ul class="list-unstyled">
+                  {{ list_1 }}
+                    <li>{{ list_item }}</li>
+                  {{ /list_1 }}
+                </ul>
+              </td>
+            </tr>
+            <tr class="table-row-default">
+              <td>
+                <h2>{{ label_2 }}</h2>
+              </td>
+              <td colspan="3">
+                <ul class="list-unstyled">
+                  {{ list_2 }}
+                    <li>{{ list_item }}</li>
+                  {{ /list_2 }}
+                </ul>
+              </td>
+            </tr>
+          {{ /if }}
+        {{ /cv }}
+      </table>
+    </div>
+
+    <div class="col-xs-3 col-xs-pull-9">
+      <aside>
+        {{ practice_area }}
+        <h1><strong>{{ name }}</strong><br> Providers</h1>
+          <nav role="navigation">
+            <ul class="list-unstyled">
+              {{ entries:listing
+                  from            = "/{segment_1}"
+                  conditions      = "practice_area:{name}"
+                  include_entries = "true"
+                  folders_only    = "false"
+              }}
+                <li {{ if is_current }} class="active" {{ /if }}><a href="{{ url }}">{{ title }}</a></li>
+              {{ /entries:listing }}
+            </ul>
+          </nav>
+        {{ /practice_area }}
+      </aside>
+      <p><a href="/{{ segment_1 }}" class="btn btn-primary">View all physicians and staff</a></p>
+    </div>
+  </div>
+</div>

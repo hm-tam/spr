@@ -1,0 +1,30 @@
+{{ if first OR index|%:4 === 1 }}
+  <div class="row">
+{{ /if }}
+
+    <div class="col-xs-6 col-sm-3">
+      <div class="thumbnail team-listing-teammate">
+        <a href="{{ url }}" class="avatar">
+          <img
+            src      = "/_themes/spr/img/blank.png"
+            data-src = "{{ transform
+                        src    = '{avatar}'
+                        width  = '265'
+                        height = '265'
+                        action = 'smart'
+                        upsize = 'true'
+                    }}"
+            alt      = "{{ title }}'s avatar"
+          >
+        </a>
+
+        <div class="text-center">
+          <p class="text-primary"><a href="{{ url }}">{{ title }}</a></p>
+          <p class="text-muted"><i>{{ practice_area_ampersand_sentence_list }}</i></p>
+        </div>
+      </div>
+    </div>
+
+{{ if last OR index|%:4 === 0 }}
+  </div>
+{{ /if }}

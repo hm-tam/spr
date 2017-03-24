@@ -1,0 +1,68 @@
+title: Service
+
+fields:
+  content:
+    type: hidden
+
+  img_primary:
+    display: Primary Image
+    type: file
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+    instructions: >
+      Choose an image to represent this service when listed on other pages, such as the homepage.
+    destination: assets/img/services
+
+
+  sections:
+    type: replicator
+    sets:
+      set_section:
+        display: Section
+        fields:
+          section_title:
+          section_img:
+            display: Section Image
+            type: file
+            allowed:
+              - gif
+              - jpeg
+              - jpg
+              - png
+            max_files: 1
+            destination: assets/img/services
+          section_content:
+            type: redactor
+            image_dir: assets/img
+            file_dir: assets/files
+
+  custom_nav:
+    display: Primary Navigation Sub-menu Heading
+    type: suggest
+    create: true
+    max_items: 1
+    allow_blank: true
+    taxonomy:
+      folder: services/*
+      type: custom_nav
+    instructions: >
+      To put this page in the primary navigation, add which heading you'd like to list it under
+      here, then add the heading to Globals > Primary Navigation > Custom Columns.
+
+  description:
+    type: textarea
+    height: 100
+    instructions: >
+      This gets used if you feature this service on the homepage and on listing pages.
+      Keep it short and sweet.
+
+  one_sentence_summary:
+    instructions: Explain the service in layman's terms for listing pages.
+
+  _template:
+    type: hidden
+    default: services/service

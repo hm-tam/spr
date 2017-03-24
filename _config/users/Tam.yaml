@@ -1,0 +1,11 @@
+---
+email: tam@holmesmillet.com
+first_name: Tam
+last_name: Pham
+password: ""
+password_hash: $2a$08$uz1bQM1uHuP.EcqPcdSt5e1qhufljre9Zzzce8IKUjFMCrDVRsSP2
+roles:
+  - member
+  - admin
+_uid: FQFwdV570278a385155D2F4cVf5
+---

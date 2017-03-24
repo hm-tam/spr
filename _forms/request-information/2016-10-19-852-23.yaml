@@ -1,0 +1,20 @@
+---
+first_name: Brooke
+last_name: Charboneau
+name_suffix: ""
+email: charbonb@csp.edu
+organization: College
+phone: 763-234-2314
+pager: ""
+address_1: 4614 Melina CT NE
+address_2: ""
+city: St Michael
+state: MN
+zip: "55376"
+comments: Hi, I am a biology major at Concordia St.Paul, and I was just wondering if there is any way that I can set up a meeting with one of the radiologists that work here. I need to interview someone in the profession that I am interested in (which is definitely radiology). If there is any way that someone could meet with me for a interview, let me know. Thanks so much!
+patient_interests:
+  - Please send me information by email.
+  - Please send me information by regular mail.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

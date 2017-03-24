@@ -1,0 +1,5 @@
+---
+title: About
+_template: pages/listing
+---
+St. Paul Radiology, P.A. is a private medical practice of highly-trained and experienced radiologists, serving St. Paul, surrounding communities, and the upper Midwest Region. We offer diagnostic imaging, consultation and interventional radiology services 24/7, and are dedicated to the safe, efficient use of technology to improve the health of our patients. Since 1920, generations of patients and physicians have trusted us for their imaging needs and relied on us for careful evaluations from highly-trained specialists. We are the only provider in the Twin Cities and Western Wisconsin area that offers continuity of care through a network of convenient imaging centers, urgent care centers, and hospital locations. Our fair pricing with health plans ensures competitively priced options with a personal touch. Our mission is to provide quality and service that exceeds expectations, time after time.

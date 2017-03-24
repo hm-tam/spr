@@ -1,0 +1,12 @@
+{{ if redirection }}{{ redirect to="{redirection}" }}{{ /if }}
+{{ if external_redirection }}{{ redirect to="{external_redirection}" }}{{ /if }}
+
+
+
+
+<div class="container">
+  <div class="col-xs-12 col-md-8 col-md-offset-2">
+    <h1>{{ title }}</h1>
+    {{ content }}
+  </div>
+</div>

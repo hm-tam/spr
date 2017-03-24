@@ -1,0 +1,19 @@
+---
+first_name: Carmen
+last_name: Tomaszewski
+name_suffix: Tomaszewski
+email: carmen.tomaszewski@hopeingod.org
+organization: none
+phone: "6517729166"
+pager: ""
+address_1: 367 Lark Ave E
+address_2: ""
+city: Maplewood
+state: MN
+zip: "55117"
+comments: 'I need to have a bone density test due to osteopaenia.  I am a private pay patient.  Can you let me know what the cost of this test would be?'
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - A patient education brochure-bone densitometry.
+---

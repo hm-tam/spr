@@ -1,0 +1,24 @@
+---
+first_name: Marlene
+last_name: Deotis
+name_suffix: ""
+email: mdeotis@aol.com
+organization: N/A
+phone: 612-521-5330
+pager: 'Cell-  612-850-8977'
+address_1: 5235 Oliver Ave. No.
+address_2: ""
+city: Minneapolis
+state: MN
+zip: "55430"
+comments: |
+  Please email a map or directions to the Gallery Clinic.
+  Coming from Minneapolis
+  Thank You 
+  Marlene Deotis
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - A map to SPR Gallery Towers.
+  - No printed information needed at this time, thank you.
+---

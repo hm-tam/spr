@@ -1,0 +1,17 @@
+{{ get_content from="/globals" show_drafts="true" }}
+  <div class="list-group quick-links-mobile" role="navigation">
+    {{ quick_links_mobile }}
+      <a href="{{ external_link|urldummy or link }}" class="list-group-item clearfix">
+        <img
+          src   = "{{ transform
+                      src    = '{icon}'
+                      width  = '28'
+                      height = '28'
+                  }}"
+          class = "pull-left"
+        >
+        {{ label }}
+      </a>
+    {{ /quick_links_mobile }}
+  </div>
+{{ /get_content }}

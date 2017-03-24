@@ -1,0 +1,182 @@
+fields:
+  content:
+    type: hidden
+
+  section_slides:
+    display: Slides
+    type: section
+
+  slides:
+    type: grid
+    fields:
+      img:
+        type: file
+        destination: assets/img/slides
+        allowed:
+          - gif
+          - jpeg
+          - jpg
+          - png
+        max_files: 1
+        width: 25%
+      caption:
+      details:
+
+
+  section_about:
+    display: About
+    type: section
+    instructions: >
+      This content is pulled from About. Edit content there to update it on the homepage.
+
+
+  section_services:
+    display: Services
+    type: section
+    instructions: >
+      This content is pulled from Our Services. Edit content there to update it on the homepage.
+
+
+  featured_services_title:
+
+  featured_services_description:
+    type: textarea
+    height: 100
+
+  featured_services:
+    type: suggest
+    content:
+      folder: services/*
+      type: pages
+    max_items: 5
+
+
+  section_amenities:
+    display: Amenities
+    type: section
+
+  amenities:
+    type: grid
+    fields:
+      icon:
+        type: file
+        destination: assets/img/icons
+        allowed:
+          - gif
+          - jpeg
+          - jpg
+          - png
+        max_files: 1
+      amenity:
+      description:
+        width: 50%
+
+
+  section_our_team:
+    display: Our Team
+    type: section
+
+  team_description:
+    type: textarea
+    height: 100
+
+  featured_teammates_label:
+    instructions:
+      below: Ex. Featured Physicians
+
+  featured_teammates:
+    type: suggest
+    content:
+      folder: our-team
+      conditions: content
+    instructions: >
+      If you don't see a teammate, make sure they have a bio filled out on their page
+      (Our Team > Name ).
+
+
+  section_news_events:
+    display: News and Events
+    type: section
+    instructions: >
+      This content is pulled from News and Events. Edit content there to update it on the homepage.
+
+
+  section_recent_tweets:
+    display: Recent Tweets
+    type: section
+    instructions: >
+      This content is pulled from Twitter. Edit content there to update it on the homepage.
+
+  twitter_widget_code:
+    type: textarea
+    height: 100
+    instructions:
+      below: |
+        1. Visit https://twitter.com/settings/widgets/.
+        2. If not logged in, log in.
+        3. Click "Create new."
+        4. Configure the widget.
+        5. Click "Create widget."
+        6. Copy and paste the code here.
+
+
+  section_testimonials:
+    display: Testimonials
+    type: section
+
+  testimonials_description:
+    type: textarea
+    height: 100
+
+  testimonials:
+    type: grid
+    fields:
+      name:
+        width: 10%
+      location:
+      photo:
+        type: file
+        destination: assets/img/avatars
+        allowed:
+          - gif
+          - jpeg
+          - jpg
+          - png
+        max_files: 1
+      testimonial:
+        type: textarea
+        height: 100
+        width: 50%
+
+
+  section_for_physicians:
+    display: For Physicians
+    type: section
+
+  refer_a_patient_scheduling_hours:
+
+  section_promotion:
+    display: Promotion
+    type: section
+
+  promotion_title:
+
+  promotion_bg_img:
+    display: Promotion Background Image
+    type: file
+    destination: assets/img
+    allowed:
+      - gif
+      - jpeg
+      - jpg
+      - png
+    max_files: 1
+
+  promotion:
+    type: redactor
+    image_dir: assets/img
+
+
+
+
+hide: true

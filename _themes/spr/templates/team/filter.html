@@ -1,0 +1,25 @@
+{{# entries:listing
+    conditions = "filter_letter:~j"
+}}
+  <h2>{{ title }}</h2>
+{{ /entries:listing #}}
+
+
+
+<div class="container">
+  {{ theme:partial src="team/header" }}
+
+
+  <div class="team-listing">
+    {{ entries:listing
+        folder     = "{segment_1}"
+        sort_by    = "sort_name"
+        conditions = "{segment_2|deslugify|slugify:_}:{segment_3|deslugify}"
+    }}
+      {{ theme:partial
+          src         = "listings/teammate"
+          use_context = "true"
+      }}
+    {{ /entries:listing }}
+  </div>
+</div>

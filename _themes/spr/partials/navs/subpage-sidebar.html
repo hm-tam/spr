@@ -1,0 +1,18 @@
+{{#
+    # Vars
+    from    string Folder to get nav from.
+    heading string Heading in sidebar.
+#}}
+
+<div class="col-xs-12 col-sm-3 col-sm-pull-9">
+  <aside>
+    <h1><a href="http://www.stpaulradiology.com/{{ from }}">{{ heading or "Contact" }}</a></h1>
+    <nav role="navigation">
+      <ul class="list-unstyled">
+        {{ nav from='{from}' }}
+          <li {{ if is_current }} class="active" {{ /if }}><a href="{{ url }}">{{ title }}</a></li>
+        {{ /nav }}
+      </ul>
+    </nav>
+  </aside>
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <h1 class="title">{{ title }} Services Offered</h1>
+  {{ content }}
+
+  <div class="row">
+    {{ pages:listing }}
+      <div class="col-xs-12 col-sm-4 narrow">
+        <h2 class="h1 center"><a href="{{ url }}">{{ title }}</a></h2>
+        <p class="text-muted text-center"><i>{{ one_sentence_summary }}</i></p>
+        <a href="{{ url }}">
+          <img
+            src      = "/_themes/spr/img/blank.png"
+            data-src = "{{ transform
+                            src    = '{img_primary}'
+                            width  = '360'
+                            height = '200'
+                            action = 'smart'
+                            upsize = 'true'
+                        }}"
+          >
+        </a>
+        <p class="center-text">{{ description|striptags|truncate:200 }}</p>
+        <p class="text-center">
+          <a href="{{ url }}" class="btn btn-primary">
+            Learn more <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </p>
+      </div>
+      {{ switch between=':2|<div class="clearfix row-line"></div>:1' }}
+    {{ /pages:listing }}
+  </div>
+</div>

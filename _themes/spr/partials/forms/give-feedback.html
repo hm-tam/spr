@@ -1,0 +1,466 @@
+{{ if {raven:success} }}
+  <h2 class="text-success">Your form was successfully submitted.</h2>
+  <p>Thanks for the feedback. We appreciate you taking the time to do so.</p>
+
+
+{{ else }}
+  {{ if {raven:has_errors} }}
+    <h2 clas="text-danger">Looks like something went wrong.</h2>
+    <ul>
+      {{ raven:errors }}
+        {{ missing }}
+          <li class="alert alert-danger">{{ field }} is required</li>
+        {{ /missing }}
+
+        {{ invalid }}
+          <li class="alert alert-danger">{{ field }}: {{ message }}</li>
+        {{ /invalid }}
+
+      {{ /raven:errors }}
+    </ul>
+  {{ /if }}
+
+  {{ raven:form formset="give_feedback" }}
+    <div class="form-group">
+      <label>When did you first visit www.stpaulrad.com? <span class="label-req">*</span></label>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "site_visit_time"
+            value = "before_appt"
+            required
+            {{ if value:site_visit_time === "before_appt" }}checked{{ /if }}
+          >
+          Before my appointment.
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "site_visit_time"
+            value = "after_appt"
+            {{ if value:site_visit_time === "after_appt" }}checked{{ /if }}
+          >
+          After my appointment.
+        </label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="location">Which location did you visit? <span class="label-req">*</span></label>
+      <select class="form-control" name="location" required>
+        {{ pages:listing from="/contact/imaging-centers" }}
+          <option value="{{ title }}" {{ if value:location === title }}selected{{ /if }}>
+            {{ title }}
+          </option>
+        {{ /pages:listing }}
+      </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="staff_commend">
+        During your visit was there a staff member who should be commended for their service to you?
+      </label>
+      <input
+        type  = "text"
+        name  = "staff_commend"
+        id    = "staff_commend"
+        value = "{{ value:staff_commend }}"
+        class = "form-control"
+      >
+    </div>
+
+
+
+
+    <fieldset>
+      <legend>In terms of your expectations, please rate the importance of services.</legend>
+
+      <div class="form-group">
+        <label for="importance_access_to_locations">
+          Access to Convenient Locations
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_access_to_locations"
+            value    = "{value:importance_access_to_locations}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_hours">
+          Extended Hours of Operation
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_hours"
+            value    = "{value:importance_hours}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_confirmation_call">
+          A Confirmation Call Prior to your Appointment
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_confirmation_call"
+            value    = "{value:importance_confirmation_call}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_advance_billing_explanation">
+          Advance Explanation of Billing Policies
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_advance_billing_explanation"
+            value    = "{value:importance_advance_billing_explanation}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_staff_knowledge">
+          A Knowledgeable Staff
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_staff_knowledge"
+            value    = "{value:importance_staff_knowledge}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_staff_courteous">
+          A Courteous Staff
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_staff_courteous"
+            value    = "{value:importance_staff_courteous}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="importance_access_to_radiologist">
+          Access to a Radiologist Regarding your Exam
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "importance_access_to_radiologist"
+            value    = "{value:importance_access_to_radiologist}"
+            required = "true"
+        }}
+      </div>
+    </fieldset>
+
+
+
+
+    <fieldset>
+      <legend>In terms of your actual experience please rate our performance.</legend>
+
+      <div class="form-group">
+        <label for="experience_location">
+          Convenient Location
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_location"
+            value    = "{value:experience_location}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_hours">
+          Hours of Operation
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_hours"
+            value    = "{value:experience_hours}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_scheduling_ease">
+          Ease of Scheduling
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_scheduling_ease"
+            value    = "{value:experience_scheduling_ease}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_registration">
+          Registration Process
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_registration"
+            value    = "{value:experience_registration}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_billing_explanation">
+          Explanation of Billing Policies
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_billing_explanation"
+            value    = "{value:experience_billing_explanation}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_exam_timeliness">
+          Timeliness of Exam to Scheduled Appointment
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_exam_timeliness"
+            value    = "{value:experience_exam_timeliness}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_imaging_center_appearance">
+          Imaging Center Appearance
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_imaging_center_appearance"
+            value    = "{value:experience_imaging_center_appearance}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_staff_knowledge">
+          Staff’s Ability to Answer Your Questions
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_staff_knowledge"
+            value    = "{value:experience_staff_knowledge}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_staff_courtesy">
+          Staff Courtesy
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_staff_courtesy"
+            value    = "{value:experience_staff_courtesy}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_radiologist_availability">
+          Radiologist Availability
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_radiologist_availability"
+            value    = "{value:experience_radiologist_availability}"
+            required = "true"
+        }}
+      </div>
+
+
+      <div class="form-group">
+        <label for="experience_overall">
+          Overall Patient Experience
+          <span class="label-req">*</span>
+        </label>
+        {{ theme:partial
+            src      = "forms/radio-rating"
+            name     = "experience_overall"
+            value    = "{value:experience_overall}"
+            required = "true"
+        }}
+      </div>
+    </fieldset>
+
+
+
+
+    <div class="form-group">
+      <label>
+        Who scheduled this appointment with St. Paul Radiology?
+        <span class="label-req">*</span>
+      </label>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "who_scheduled"
+            value = "My Physician"
+            {{ if value:who_scheduled === "My Physician" }}checked{{ /if }}
+          >
+          My Physician
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "who_scheduled"
+            value = "Physician's Nurse/Staff"
+            {{ if value:who_scheduled === "Physician's Nurse/Staff" }}checked{{ /if }}
+          >
+          Physician's Nurse/Staff
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "who_scheduled"
+            value = "Myself"
+            {{ if value:who_scheduled === "Myself" }}checked{{ /if }}
+          >
+          Myself
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "who_scheduled"
+            value = "Other"
+            {{ if value:who_scheduled === "Other" }}checked{{ /if }}
+          >
+          Other
+        </label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="who_scheduled_other">Other (please explain)</label>
+      <input
+        type  = "text"
+        name  = "who_scheduled_other"
+        id    = "who_scheduled_other"
+        value = "{{ value:who_scheduled_other }}"
+        class = "form-control"
+      >
+    </div>
+
+
+    <div class="form-group">
+      <label>Would you return to St. Paul Radiology? <span class="label-req">*</span></label>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "would_return"
+            value = "Yes"
+            {{ if value:would_return === "Yes" }}checked{{ /if }}
+          >
+          Yes
+        </label>
+      </div>
+
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "would_return"
+            value = "No"
+            {{ if value:would_return === "No" }}checked{{ /if }}
+          >
+          No
+        </label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="would_return_why_not">No (please explain)</label>
+      <input
+        type  = "text"
+        name  = "would_return_why_not"
+        id    = "would_return_why_not"
+        value = "{{ value:would_return_why_not }}"
+        class = "form-control"
+      >
+    </div>
+
+
+    <div class="form-group">
+      <label for="comments">Comments</label>
+      <textarea
+        name  = "comments"
+        id    = "comments"
+        rows  = "8"
+        class = "form-control"
+      >{{ value:comments }}</textarea>
+    </div>
+
+    <button class="btn btn-primary">Submit</button>
+  {{ /raven:form }}
+{{ /if }}

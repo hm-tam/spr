@@ -1,0 +1,13 @@
+<div class="container">
+  {{ theme:partial src="team/header" }}
+
+
+  <div class="team-listing">
+    {{ entries:listing sort_by="sort_name" }}
+      {{ theme:partial
+          src         = "listings/teammate"
+          use_context = "true"
+      }}
+    {{ /entries:listing }}
+  </div>
+</div>

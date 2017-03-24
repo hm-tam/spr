@@ -1,0 +1,7 @@
+<header>
+  <h1><a href="{{ url }}">{{ title }}</a></h1>
+  <div class="meta">
+    <time datetime="{{ date|format:c }}">{{ date }}</time> |
+    {{ category|title }}{{ if tags }}, {{ tags|list|title }}{{ /if }}
+  </div>
+</header>

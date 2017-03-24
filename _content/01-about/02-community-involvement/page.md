@@ -1,0 +1,15 @@
+---
+_fieldset: page
+title: Community Involvement
+img_primary: /assets/img/Community Involvement-20151029113208.jpg
+listing_description: 'St. Paul Radiology takes pride in supporting the community with: free disease screenings, healthcare student mentoring, and local youth educational and arts initiatives.'
+---
+<hr><h3>Serving Patients and the Communities They Live In</h3><p>St. Paul Radiology takes pride in supporting community initiatives in St. Paul, the surrounding East Metro area, and the upper Midwest region ─ including local youth educational and arts initiatives, and mentoring students interested in healthcare careers.
+</p><p>Many of the physicians of St. Paul Radiology live and work in the East Metro area. They are active participants in their community, small business leaders, and advocates for the general welfare and quality of local medical care. They have insights on medical trends, issues, and concerns. As healthcare reform becomes an increasingly important topic ─ both at the dinner table and our nation’s capitol ─ the physicians of St. Paul Radiology remain committed to working with local, state and national policymakers to find solutions that truly improve the quality of medical care to this community, state, and country.
+</p><p>Please call <a href="tel: 651.292.2000">651.292.2000</a> and ask for “Community Relations” to learn more about the community outreach services provided by the physicians of St. Paul Radiology.
+</p><h3>Access to Services and Quality Patient Care</h3><p>Access to quality patient care and accurate diagnostic imaging services remains a central tenet of the deep and rich history of this group of providers... the original radiology practice in St. Paul, Minnesota.
+</p><p>The percentage of the population that is uninsured or insured by public programs is growing, mostly due to difficult economic conditions and declining employment. At the same time, the number of private physicians open to seeing these patients is also declining, due to low reimbursement rates, high administrative costs, and more. Although these difficult conditions exist, St. Paul Radiology has recently taken practice policy initiatives that support patients who have no healthcare insurance.
+</p><p>The St. Paul Radiology Billing office can make arrangements for installment payment plans and reduced pricing for payment at the time of services for the uninsured. For further details call the St. Paul Radiology Billing office at <a href="tel:1.877.556.0695">1.877.556.0695</a>.
+</p><h3>St. Paul Radiology Foundation Mission Statement</h3><p>“Giving to the community that St. Paul Radiology serves.”
+</p><p>The physicians of St. Paul Radiology have established a foundation as part of its ongoing commitment to the East Metro community. Beneficiaries of the foundation’s work include organizations that contribute to improving medical care, and healthy living and lifestyles within the Twin Cities.
+</p>

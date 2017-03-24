@@ -1,0 +1,24 @@
+<div class="row entries-listing-entry">
+  <div class="col-xs-12 col-sm-5">
+    <a href="{{ url }}">
+      <img
+        src      = "/_themes/spr/img/blank.png"
+        data-src = "{{ transform
+                        src    = '{img_primary}'
+                        width  = '365'
+                        action = 'crop'
+                    }}"
+      >
+    </a>
+  </div>
+
+  <div class="col-xs-12 col-sm-7">
+    {{ theme:partial
+        src         = "entries/header"
+        use_context = "true"
+    }}
+    
+    <p>{{ content|striptags|truncate:200 }}</p>
+    <p><a href="{{ url }}" class="link-more">Read more <span class="glyphicon glyphicon-chevron-right"></span></a></p>
+  </div>
+</div>

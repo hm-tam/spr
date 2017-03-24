@@ -1,0 +1,25 @@
+<div class="container">
+  <header>
+    <h1 class="title">{{ segment_1|deslugify|title:smart }}</h1>
+    {{ get_content from="/{segment_1}" }}{{ content }}{{ /get_content }}
+  </header>
+
+  <div class="row entry {{ body_class }}">
+    <div class="col-xs-12 col-sm-9 entries-listing">
+      {{ theme:partial src="entries/header" }{#id .class}}
+      <img
+        src      = "/_themes/spr/img/blank.png"
+        data-src = "{{ transform
+                        src   = '{img_primary}'
+                       
+                    }}"
+      >
+
+      {{ content }}
+    </div>
+
+    <aside class="col-xs-12 col-sm-3">
+      {{ theme:partial src="entries/sidebar" }}
+    </aside>
+  </div>
+</div>
