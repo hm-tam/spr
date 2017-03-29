@@ -101,9 +101,41 @@ honeypot: website
 # from the POST will squash this submission and send a list of
 # missing fields to your {{ raven:errors }} tagpair
 required:
+  - 1_date_applied
+  - 2_positions_applied
+  - 3_attribution
   - 4_first_name
   - 4_last_name
+  - 5_address_1
+  - 5_city
+  - 5_state
+  - 5_zip
+  - 6_phone_main
   - 7_email
+  - 8_age_check
+  - 9_applied_before
+  - 9a_if_yes
+  - 10_employed_spr_before
+  - 10a_if_yes
+  - 11_relatives_at_spr
+  - 11a_if_yes
+  - 12_employed_current
+  - 13_employed_contact
+  - 14_visa_status
+  - 15_date_work_start
+  - 16_desired_salary
+  - 17_work_availability
+  - 20_education_HS_diploma
+  - 21_experience_A_employer
+  - 21_experience_A_jobtitle
+  - 21_experience_A_workperformed
+  - 21_experience_A_dates
+  - 21_experience_A_salary_start
+  - 21_experience_A_salary_end
+  - 21_experience_A_exit_reason
+  - 21_experience_A_contact
+  - 24_signature
+  - 25_signature_date
 
 submission_save_extension: yaml
 
