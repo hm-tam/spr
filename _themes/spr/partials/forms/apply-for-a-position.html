@@ -48,6 +48,9 @@
       {{# Questions: 23 thru 25 - Files and Signature #}}
       {{ theme:partial src="forms/apply/part-6" }}
 
+      {{# This is our honeypot field to prevent spam entries #}}
+      <input type="text" name="website" class="hidden">
+
       <button class="btn btn-primary">Submit</button>
 
     {{ /raven:form }}

@@ -95,6 +95,7 @@ allowed:
   - 24_signature
   - 25_signature_date
 
+honeypot: website
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
