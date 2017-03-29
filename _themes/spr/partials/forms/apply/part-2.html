@@ -1,0 +1,405 @@
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label"> 8. If you are under 18 years of age, can you provide  proof of your eligibility to work? <span class="label-req">*</span></label>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "8_age_check"
+            id    = "8_age_check"
+            value = "Yes"
+
+          >
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "8_age_check"
+            id    = "8_age_check"
+            value = "No"
+
+          >
+          No
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "8_age_check"
+            id    = "8_age_check"
+            value = "over-18"
+
+          >
+          Over age 18
+        </label>
+      </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label"> 9. Have you ever filed an application with us before? <span class="label-req">*</span></label>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "9_applied_before"
+            id    = "9_applied_before"
+            value = "Yes"
+
+          >
+          Yes
+        </label>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">If yes, give date(s):</label>
+          <div class="col-sm-5">
+            <input
+              value = "{{ value:9a_if_yes }}"
+              type  = "text"
+              name  = "9a_if_yes"
+              class = "form-control"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "9_applied_before"
+            id    = "9_applied_before"
+            value = "No"
+
+          >
+          No
+        </label>
+      </div>
+
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label">10. Have you ever been employed with us before? <span class="label-req">*</span></label>
+      <div class="radio">
+        <label>
+          <input
+            value = "{{ value:10_employed_spr_before }}"
+            type  = "radio"
+            name  = "10_employed_spr_before"
+            id    = "10_employed_spr_before"
+            value = "Yes"
+
+          >
+          Yes
+        </label>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">If yes, give date(s):</label>
+          <div class="col-sm-5">
+            <input
+              value = "{{ value:10a_if_yes }}"
+              type  = "text"
+              name  = "10a_if_yes"
+              class = "form-control"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "10_employed_spr_before"
+            id    = "10_employed_spr_before"
+            value = "No"
+
+          >
+          No
+        </label>
+      </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label">11. Do any of your friends or relatives work here? <span class="label-req">*</span></label>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "11_relatives_at_spr"
+            id    = "11_relatives_at_spr"
+            value = "Yes"
+
+          >
+          Yes
+        </label>
+      </div>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-3 control-label">If yes, give name(s) and relationship:</label>
+          <div class="col-sm-5">
+            <input
+              value = "{{ value:11a_if_yes }}"
+              type  = "text"
+              name  = "11a_if_yes"
+              class = "form-control"
+            >
+          </div>
+        </div>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "11_relatives_at_spr"
+            id    = "11_relatives_at_spr"
+            value = "No"
+
+          >
+          No
+        </label>
+      </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label">12. Are you currently employed? <span class="label-req">*</span></label>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "12_employed_current"
+          id    = "12_employed_current"
+          value = "Yes"
+
+        >
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "12_employed_current"
+          id    = "12_employed_current"
+          value = "No"
+
+        >
+        No
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label">13. May we contact your present employer? <span class="label-req">*</span></label>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "13_employed_contact"
+          id    = "13_employed_contact"
+          value = "Yes"
+
+        >
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "13_employed_contact"
+          id    = "13_employed_contact"
+          value = "No"
+
+        >
+        No
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "13_employed_contact"
+          id    = "13_employed_contact"
+          value = "n/a"
+
+        >
+        n/a
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <label class="control-label">14. Are you prevented from lawfully becoming employed in this country because of Visa or Immigration Status? Proof of citizenship or immigration status will be  upon employment. <span class="label-req">*</span></label>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "14_visa_status"
+          id    = "14_visa_status"
+          value = "Yes"
+
+        >
+        Yes
+      </label>
+    </div>
+    <div class="radio">
+      <label>
+        <input
+          type  = "radio"
+          name  = "14_visa_status"
+          id    = "14_visa_status"
+          value = "No"
+
+        >
+        No
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-sm-6">
+    <label for="15_date_work_start">15. Date available for work: <span class="label-req">*</span></label>
+    <input
+      value = "{{ value:15_date_work_start }}"
+      type  = "date"
+      name  = "15_date_work_start"
+      id    = "15_date_work_start"
+      class = "form-control"
+
+    >
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-sm-6">
+    <label for="16_desired_salary">16. What is your desired salary? <span class="label-req">*</span></label>
+    <input
+      value = "{{ value:16_desired_salary }}"
+      type  = "text"
+      name  = "16_desired_salary"
+      id    = "16_desired_salary"
+      class = "form-control"
+
+    >
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-sm-6">
+    <label for="17_work_availability">17. Are you available to work: (check all that apply) <span class="label-req">*</span></label>
+    <div class="checkbox">
+      <label>
+        <input
+          type  = "checkbox"
+          name  = "17_work_availability"
+          id    = "17_work_availability"
+          value = "Full Time"
+
+        >
+        Full Time
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input
+          type  = "checkbox"
+          name  = "17_work_availability"
+          id    = "17_work_availability"
+          value = "Part Time"
+
+        >
+        Part Time
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input
+          type  = "checkbox"
+          name  = "17_work_availability"
+          id    = "17_work_availability"
+          value = "Temporary"
+
+        >
+        Temporary
+      </label>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input
+          type  = "checkbox"
+          name  = "17_work_availability"
+          id    = "17_work_availability"
+          value = "Casual"
+
+        >
+        Casual
+      </label>
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-sm-10">
+    <div class="form-group">
+      <label for="18_work_comments">18. State any additional information you feel may be helpful to us in considering your application, such as any breaks in work history. </label>
+      <textarea
+        name  = "18_work_comments"
+        id    = "18_work_comments"
+        rows  = "8"
+        class = "form-control"
+      >{{ value:18_work_comments }}</textarea>
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-sm-10">
+    <label class="control-label">19. Have you ever been discharged or asked to resign from a job?</label>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "9_applied_before"
+            id    = "9_applied_before"
+            value = "Yes"
+          >
+          Yes
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input
+            type  = "radio"
+            name  = "9_applied_before"
+            id    = "9_applied_before"
+            value = "No"
+          >
+          No
+        </label>
+      </div>
+      <label for="19a_if_yes" class="control-label">If yes, explain:</label>
+      <textarea
+        name  = "19a_if_yes"
+        id    = "19a_if_yes"
+        rows  = "8"
+        class = "form-control"
+        >{{ value:19a_if_yes }}</textarea>
+  </div>
+</div>

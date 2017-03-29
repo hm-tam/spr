@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h6>23. Resume/Cover Letter Upload</h6>
+    <div class="row form-group">
+      <div class="col-sm-6">
+        <label for="23_file_resume">Resume</label>
+        <input type="file" name="23_file_resume" value="">
+      </div>
+    </div>
+    <div class="row form-group">
+      <div class="col-sm-6">
+        <label for="23_file_coverletter">Cover Letter</label>
+        <input type="file" name="23_file_coverletter" value="">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <h6>Applicant's Statement</h6>
+    <p>I certify that answers given herein are true and complete.</p>
+    <p>I authorize investigation of all statements contained in this application for employment as may be necessary in arriving at an employment decision</p>
+    <p>This application for employment shall be considered active for a period of time not to exceed 45 days. Any applicant wishing to be considered for employment beyond this time period should inquire as to whether or not applications are being accepted at that time. </p>
+    <p>I hereby understand and acknowledge that, unless otherwise defined by applicable law, any employment relationship with this organization is an "at will" nature, which means that the Employee may resign at any time and the Employer may discharge Employee at any time with or without cause</p>
+    <p>In the event of employment, I understand that false or misleading information given in my application or interview(s) may result in discharge. I understand, also, that I am  to abide by all rules and regulations of the employer.</p>
+    <br><br>
+    <div class="col-sm-5">
+      <label for="24_signature">Signature: <span class="label-req">*</span></label>
+      <input
+        value = "{{ value:24_signature }}"
+        type  = "text"
+        name  = "24_signature"
+        id    = "24_signature"
+        class = "form-control"
+
+      >
+    </div>
+    <div class="col-sm-5">
+      <label for="25_signature_date">Date: <span class="label-req">*</span></label>
+      <input
+        value = "{{ value:25_signature_date }}"
+        type  = "date"
+        name  = "25_signature_date"
+        id    = "25_signature_date"
+        class = "form-control"
+
+      >
+    </div>
+  </div>
+</div>
+
+<div class="row form-group">
+  <div class="col-xs-12">
+    <p>I consent to use of my e-signature per the Uniform Electronic Transactions Act for purposes of this Employee Application.</p>
+  </div>
+</div>
