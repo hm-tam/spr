@@ -121,15 +121,16 @@ submission_save_extension: yaml
 # {{ /raven:error }}
 #
 
-# Configure notification email
-# email:
-#   to: "james@lionsmouth.digital"
-#   from: "contact.us@stpaulrad.com"
-#   subject: >
-#     Application submission from {{ first_name }} {{ last_name }}{{ if suffix }}, {{ suffix }}{{ /if }}
-#   # automagic: true
-#   html_template: email/apply_for_a_position_html
-#   text_template: email/apply_for_a_position_text
+#Configure notification email
+email:
+  to: "contact.us@stpaulrad.com"
+  from: "contact.us@stpaulrad.com"
+  subject: >
+    Application submission from {{ 4_first_name }} {{ 4_last_name }}
+  automagic: true
+# I would use the Automagic function instead of the email templates that are currently being used. Looking at the templates it appears that the desired look is essentially the same view that automagic displays.
+#  html_template: email/apply_for_a_position_html
+#  text_template: email/apply_for_a_position_text
 
 datestamp_format: "m/d/Y"
 
