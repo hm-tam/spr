@@ -157,7 +157,7 @@ submission_save_extension: yaml
 
 #Configure notification email
 email:
-  to: "contact.us@stpaulrad.com"
+  to: "human.resources@stpaulrad.com"
   from: "contact.us@stpaulrad.com"
   subject: >
     Application submission from {{ 4_first_name }} {{ 4_last_name }}
