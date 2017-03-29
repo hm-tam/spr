@@ -8,7 +8,9 @@ allowed:
   - 1_date_applied
   - 2_positions_applied
   - 3_attribution
-  - 3a_attribution_input
+  - 3a_attribution_website
+  - 3a_attribution_relation
+  - 3a_attribution_other
   - 4_first_name
   - 4_last_name
   - 5_address_1
