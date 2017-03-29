@@ -4,6 +4,6 @@
 #
 ###########################################################################################
 
-_site_url: /
+_site_url: _site_url
 _log_level: debug
-_display_debug_panel: false
+_display_debug_panel: true
