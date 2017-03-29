@@ -5,41 +5,104 @@ upload_destination: _forms/uploads/apply-for-position/
 # Fields allowed to be submitted in the form, automatically
 # purging anything and everything else
 allowed:
-  - first_name
-  - last_name
-  - name_suffix
-  - email
-  - organization
-  - phone
-  - pager
-  - address_1
-  - address_2
-  - city
-  - state
-  - zip
-  - position
-  - coverletter
-  - resume
-  - upload
+  - 1_date_applied
+  - 2_positions_applied
+  - 3_attribution
+  - 3a_attribution_input
+  - 4_first_name
+  - 4_last_name
+  - 5_address_1
+  - 5_address_2
+  - 5_city
+  - 5_state
+  - 5_zip
+  - 6_phone_main
+  - 6_phone_alt
+  - 7_email
+  - 8_age_check
+  - 9_applied_before
+  - 9a_if_yes
+  - 10_employed_spr_before
+  - 10a_if_yes
+  - 11_relatives_at_spr
+  - 11a_if_yes
+  - 12_employed_current
+  - 13_employed_contact
+  - 14_visa_status
+  - 15_date_work_start
+  - 16_desired_salary
+  - 17_work_availability
+  - 18_work_comments
+  - 19_job_discharge
+  - 19a_if_yes
+  - 20_education_HS_diploma
+  - 20_education_A_school_name
+  - 20_education_A_location
+  - 20_education_A_years
+  - 20_education_A_degree
+  - 20_education_A_major
+  - 20_education_B_school_name
+  - 20_education_B_location
+  - 20_education_B_years
+  - 20_education_B_degree
+  - 20_education_B_major
+  - 20_education_C_school_name
+  - 20_education_C_location
+  - 20_education_C_years
+  - 20_education_C_degree
+  - 20_education_C_major
+  - 21_experience_A_employer
+  - 21_experience_A_jobtitle
+  - 21_experience_A_workperformed
+  - 21_experience_A_dates
+  - 21_experience_A_salary_start
+  - 21_experience_A_salary_end
+  - 21_experience_A_exit_reason
+  - 21_experience_A_contact
+  - 21_experience_B_employer
+  - 21_experience_B_jobtitle
+  - 21_experience_B_workperformed
+  - 21_experience_B_dates
+  - 21_experience_B_salary_start
+  - 21_experience_B_salary_end
+  - 21_experience_B_exit_reason
+  - 21_experience_B_contact
+  - 21_experience_C_employer
+  - 21_experience_C_jobtitle
+  - 21_experience_C_workperformed
+  - 21_experience_C_dates
+  - 21_experience_C_salary_start
+  - 21_experience_C_salary_end
+  - 21_experience_C_exit_reason
+  - 21_experience_C_contact
+  - 22_reference_A_name
+  - 22_reference_A_relation
+  - 22_reference_A_relation_length
+  - 22_reference_A_phone
+  - 22_reference_A_email
+  - 22_reference_B_name
+  - 22_reference_B_relation
+  - 22_reference_B_relation_length
+  - 22_reference_B_phone
+  - 22_reference_B_email
+  - 22_reference_C_name
+  - 22_reference_C_relation
+  - 22_reference_C_relation_length
+  - 22_reference_C_phone
+  - 22_reference_C_email
+  - 23_file_coverletter
+  - 23_file_resume
+  - 24_signature
+  - 25_signature_date
 
 
 # You are not required to require fields, but once you do, any missing
 # from the POST will squash this submission and send a list of
 # missing fields to your {{ raven:errors }} tagpair
 required:
-  - first_name
-  - last_name
-  - email
-  - organization
-  - phone
-  - address_1
-  - city
-  - state
-  - zip
-  - position
-  - coverletter
-  - resume
-  - upload
+  - 4_first_name
+  - 4_last_name
+  - 7_email
 
 submission_save_extension: yaml
 
@@ -58,14 +121,14 @@ submission_save_extension: yaml
 #
 
 # Configure notification email
-email:
-  to: "contact.us@stpaulrad.com"
-  from: "contact.us@stpaulrad.com"
-  subject: >
-    Application submission from {{ first_name }} {{ last_name }}{{ if suffix }}, {{ suffix }}{{ /if }}
-  # automagic: true
-  html_template: email/apply_for_a_position_html
-  text_template: email/apply_for_a_position_text
+# email:
+#   to: "james@lionsmouth.digital"
+#   from: "contact.us@stpaulrad.com"
+#   subject: >
+#     Application submission from {{ first_name }} {{ last_name }}{{ if suffix }}, {{ suffix }}{{ /if }}
+#   # automagic: true
+#   html_template: email/apply_for_a_position_html
+#   text_template: email/apply_for_a_position_text
 
 datestamp_format: "m/d/Y"
 
