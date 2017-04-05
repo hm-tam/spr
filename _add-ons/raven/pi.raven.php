@@ -149,7 +149,7 @@ class Plugin_raven extends Plugin {
 		if ( ! $this->isActiveForm()) {
 			return false;
 		}
-
+		
 		return $this->flash->get('success');
 	}
 
