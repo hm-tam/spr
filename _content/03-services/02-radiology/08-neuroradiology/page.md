@@ -20,11 +20,11 @@ sections:
       	<li><a href="http://stpaulradiology.com/our-team/thomas-c-bryson-md" title="Thomas C. Bryson, M.D." target="_blank">Thomas C. Bryson, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/blake-a-carlson-md" title="Blake A. Carlson, M.D." target="_blank">Blake A. Carlson, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/benjamin-a-gilloon-md" title="Benjamin A. Gilloon, M.D." target="_blank">Benjamin A. Gilloon, MD</a></li>
-      	<li><a href="http://stpaulradiology.com/our-team/christopher-a-jackson-md" title="Christopher A. Jackson, M.D." target="_blank">Christopher A. Jackson, MD</a></li>
+      	
       	<li><a href="http://stpaulradiology.com/our-team/david-p-lambert-md" title="David P. Lambert, M.D." target="_blank">David P. Lambert, MD</a></li><li><a href="http://stpaulradiology.com/our-team/kristin-a-lieberman-md" target="_blank">Kristin A. Lieberman, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/benjamin-j-may-md" title="Benjamin J. May, M.D." target="_blank">Benjamin J. May, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/sara-r-nace-md" title="Sara R. Nace, MD" target="_blank">Sara R. Nace, MD</a></li>
-      	<li><a href="http://stpaulradiology.com/our-team/vladimir-savcenko-md" title="Vladimir Savcenko, M.D." target="_blank">Vladimir Savcenko, MD</a></li>
+      	<li><a href="http://stpaulradiology.com/our-team/vladimir-savcenko-md" title="Vladimir Savcenko, M.D." target="_blank">Vladimir Savcenko, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/deepak-k-somashekar-md">Deepak K. Somashekar, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/jeff-d-werner-md" title="Jeff D. Werner, MD" target="_blank">Jeff D. Werner, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/don-wiese-ii-md-phd" title="Don Wiese II, M.D., Ph.D." target="_blank">Don Wiese II, MD, PhD</a></li>
       </ul>
@@ -33,6 +33,7 @@ description: Neuroradiology focuses on the central nervous system, the periphera
 one_sentence_summary: Devoted to the diagnostic imaging and diagnosis of the brain and nerves, head, neck and spine.
 _template: services/service
 ---
+
 
 
 

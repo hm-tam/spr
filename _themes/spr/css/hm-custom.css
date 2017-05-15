@@ -3,7 +3,9 @@ SPR Custom Styles by
 HM Interactive 
 Author: Tam
 ============================*/
-
+.carousel-control{
+	height:472px;
+}
 .google-custom-search-engine #___gcse_0 > div > div > form > table.gsc-search-box > tbody > tr > td.gsc-search-button,
 .google-custom-search-engine #___gcse_0 > div > div > form > table.gsc-search-box > tbody > tr > td.gsc-clear-button{
 	display:none !important;

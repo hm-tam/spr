@@ -29,7 +29,7 @@ sections:
     section_img: /assets/img/services/SPR Doctors-20151016172529.jpg
     section_content: |
       <h3>Interventional Radiology Providers at St. Paul Radiology</h3><hr><ul>
-      	<li><a href="http://stpaulradiology.com/our-team/peter-a-bretzman-md" target="_blank">Peter A. Bretzman, MD</a></li>
+      	
       	<li><a href="http://stpaulradiology.com/our-team/philip-m-ditmanson-md" target="_blank">Philip M. Ditmanson, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/timothy-c-goertzen-md" target="_blank">Timothy C. Goertzen, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/andrew-s-hartigan-md" target="_blank">Andrew S. Hartigan, MD</a></li>
@@ -50,6 +50,7 @@ description: Interventional radiologists perform procedures using MRI, CT, Ultra
 one_sentence_summary: The imaging, diagnosis and treatment of patients with minimally-invasive interventional radiology.
 _template: services/service
 ---
+
 
 
 

@@ -1,15 +1,13 @@
 ---
 _fieldset: service
 title: Open MRI
-img_primary: /assets/img/services/OpenMr General Info-20170220120351.jpg
+img_primary: /assets/img/services/open-mri-optimized-page-fixed.jpg
 sections:
   - 
     type: set_section
     section_title: General Info
-    section_img: /assets/img/services/OpenMr General Info-20170220120354.jpg
-    section_content: |
-      <h3>General Information About Open MRI</h3><p>Open Magnetic Resonance Imaging, or Open MRI, is a very patient-friendly procedure that is quieter and more comfortable for patients than a closed MRI. Open MRI gathers information about your body using a magnet, radio waves, and a computer to create detailed internal images of the body and transmits them for your doctor to see. Claustrophobic, obese and pediatric patients, along with those suffering from post-traumatic stress syndrome, are often able to comfortably undergo MRI examinations. The Open MRI unit is available at <a title="Roseville Location" href="http://www.stpaulradiology.com/contact/imaging-centers/downtown-campus" target="_blank">St. Paul Radiology Downtown Campus</a>.
-      </p>
+    section_img: /assets/img/services/open-mri-optimized-page-fixed-20170329113636.jpg
+    section_content: '<h3>General Information About Open MRI</h3><p>Open Magnetic Resonance Imaging, or Open MRI, is a very patient-friendly scan that is quieter and more comfortable for patients than a closed MRI. Open MRI gathers information about your body using a magnet, radio waves, and a computer to create detailed internal images of the body and transmits them for your doctor to see.</p><p>Claustrophobic and obese patients as well as those feeling anxious or concerned are often able to comfortably undergo Open MRI examinations. It features a large and comfortable bed and opening, reduced noise and allows patients to relax during the exam. In addition to enhanced comfort, this technology features high-field technology to provide outstanding image quality.</p><p>The Open MRI unit is available at <a href="http://www.stpaulradiology.com/contact/imaging-centers/downtown-campus">St. Paul Radiology Downtown Campus</a>.</p>'
   - 
     type: set_section
     section_title: Select Imaging Procedures
@@ -80,6 +78,10 @@ description: 'Open Magnetic Resonance Imaging, or Open MRI is a very patient fri
 one_sentence_summary: A quieter and more comfortable option to a standard MRI.
 _template: services/service
 ---
+
+
+
+
 
 
 

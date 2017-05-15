@@ -13,9 +13,7 @@ sections:
     section_title: Practicing Physicians
     section_img: /assets/img/services/SPR Doctors.jpg
     section_content: |
-      <h3>Body Imaging Physicians at St. Paul Radiology</h3>
-      <hr>
-      <ul>
+      <h3>Body Imaging Physicians at St. Paul Radiology</h3><hr><ul>
       	<li><a href="http://stpaulradiology.com/our-team/richard-n-aizpuru-md" title="Richard N. Aizpuru, M.D." target="_blank">Richard N. Aizpuru, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/azhar-ali-md" title="Azhar Ali, M.D." target="_blank">Azhar Ali, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/todd-m-arsenault-md" title="Todd M. Arsenault, M.D." target="_blank">Todd M. Arsenault, MD</a></li>
@@ -24,7 +22,7 @@ sections:
       	<li><a href="http://stpaulradiology.com/our-team/jeffrey-m-barkmeier-md" title="Jeffrey M. Barkmeier, M.D." target="_blank">Jeffrey M. Barkmeier, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/mark-w-berger-md" title="Mark W. Berger, M.D." target="_blank">Mark W. Berger, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/john-f-brunner-md" title="Mark W. Berger, M.D." target="_blank">John F. Brunner, MD</a></li>
-      	<li><a href="http://stpaulradiology.com/our-team/john-m-caspers-md" title="John M. Caspers, M.D." target="_blank">John M. Caspers, MD</a></li>
+      	<li><a href="http://stpaulradiology.com/our-team/john-m-caspers-md" title="John M. Caspers, M.D." target="_blank">John M. Caspers, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/megan-elgethun-md">Megan Elgethun, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/l-john-fahrner-md">L. John Fahrner, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/dominic-f-frecentese-md" title="Dominic F. Frecentese, M.D." target="_blank">Dominic F. Frecentese, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/michael-j-grogan-md" title="Michael J. Grogan, M.D." target="_blank">Michael J. Grogan, MD</a></li>
       	<li><a href="http://www.stpaulradiology.com/our-team/steven-c-hommeyer-md" target="_blank">Steven C. Hommeyer, MD</a></li>
@@ -34,8 +32,8 @@ sections:
       	<li><a href="http://stpaulradiology.com/our-team/lucas-b-ludeman-md" title="Lucas B. Ludeman, M.D." target="_blank">Lucas B. Ludeman, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/frank-p-maguire-md" title="Frank P. Maguire, M.D." target="_blank">Frank P. Maguire, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/paul-f-mulcahy-md" title="Paul F. Mulcahy, M.D." target="_blank">Paul F. Mulcahy, MD</a></li>
-      	<li><a href="http://stpaulradiology.com/our-team/alexandra-l-muschenheim-md" title="Alexandra L. Muschenheim, M.D." target="_blank">Alexandra L. Muschenheim, MD</a></li>
-      	<li><a href="http://www.stpaulradiology.com/our-team/gregory-a-rathmann-md" title="Gregory A. Rathmann, M.D." target="_blank">Gregory A. Rathmann, MD</a></li>
+      	<li><a href="http://stpaulradiology.com/our-team/alexandra-l-muschenheim-md" title="Alexandra L. Muschenheim, M.D." target="_blank">Alexandra L. Muschenheim, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/james-m-mylrea-md">James M. Mylrea, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/michael-f-powell-md">Michael F. Powell, MD</a></li>
+      	<li><a href="http://www.stpaulradiology.com/our-team/gregory-a-rathmann-md" title="Gregory A. Rathmann, M.D." target="_blank">Gregory A. Rathmann, MD</a></li><li><a href="https://www.stpaulradiology.com/our-team/mathew-j-so-md">Mathew J. So, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/patrick-p-sullivan-md" title="Patrick P. Sullivan, M.D." target="_blank">Patrick P. Sullivan, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/angela-tai-md" title="Angela Tai, M.D." target="_blank">Angela Tai, MD</a></li>
       	<li><a href="http://stpaulradiology.com/our-team/joseph-h-tashjian-md" title="Joseph H. Tashjian, M.D." target="_blank">Joseph H. Tashjian, MD</a></li>
@@ -50,6 +48,7 @@ _template: services/service
 description: Body imaging radiologists use non-invasive imaging to look for abnormalities, and perform procedures by guiding instruments inside the body to sample tissue.
 one_sentence_summary: Devoted to the diagnostic imaging and diagnosis of diseases affecting the chest, abdomen, and pelvis.
 ---
+
 
 
 

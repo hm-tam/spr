@@ -4,17 +4,21 @@ _fieldset: home
 _template: home
 slides:
   - 
-    img: /assets/img/slides/Family_Slideshow_Image.jpg
+    img: /assets/img/slides/open-mri-optimized-banner-v5.jpg
+    caption: Wide Open Spaces
+    details: 'Our new Open MRI provides the most comfortable advanced imaging experience.<br/><a style="color:#b2d8ef;" href="https://www.stpaulradiology.com/services/imaging/open-mri">LEARN MORE</a>'
+  - 
+    img: /assets/img/slides/Family_Slideshow_Image-v2.jpg
     caption: 'Diagnostic imaging, consultation and interventional radiology 24/7 - 365 days a year.'
-    details: 'Since 1920, generations of patients and physicians have trusted us for their imaging needs. <a href="http://www.stpaulradiology.com/about">LEARN MORE.</a>'
+    details: 'Since 1920, generations of patients and physicians have trusted us for their imaging needs.<br/><a style="color:#b2d8ef;" href="http://www.stpaulradiology.com/about">LEARN MORE</a>'
   - 
-    img: /assets/img/slides/MRI_Slideshow_Image.jpg
+    img: /assets/img/slides/MRI_Slideshow_fix.jpg
     caption: Some of Minnesota’s best imaging experts are at St. Paul Radiology.
-    details: 'We have over 70 radiologists who rank among our state’s top board-certified, fellowship-trained, subspecialty imaging experts. <a href="http://www.stpaulradiology.com/our-team">LEARN MORE.</a>'
+    details: 'We have over 80 radiologists who rank among our state’s top board-certified, fellowship-trained, subspecialty imaging experts.<br/><a style="color:#b2d8ef;" href="http://www.stpaulradiology.com/our-team">LEARN MORE</a>'
   - 
-    img: /assets/img/slides/Smoking_Slideshow_Image-20151013142100.jpg
+    img: /assets/img/slides/Smoking_Slide-fixed-v2.jpg
     caption: Are you a current smoker?
-    details: 'If the answer is yes, then ask us about a low-dose CT lung cancer screening. <a href="http://www.stpaulradiology.com/services/ancillary/lung-screening">LEARN MORE.</a>'
+    details: 'If the answer is yes, then ask us about a low-dose CT lung cancer screening.<br/><a style="color:#b2d8ef;" href="http://www.stpaulradiology.com/services/ancillary/lung-screening">LEARN MORE</a>'
 amenities:
   - 
     icon: /assets/img/icons/Reduced Radiation-20151015113449.png
@@ -40,7 +44,7 @@ amenities:
     icon: /assets/img/icons/Free Parking.png
     amenity: Free Parking
     description: Safe and convenient at all of our imaging locations.
-team_description: St. Paul Radiology is a group of 70 independent physicians who rank among Minnesota’s top board-certified, fellowship-trained, subspecialty imaging experts. In addition, our experienced nurses, technicians and administrative staff are courteous, efficient and available to answer any questions you may have about the services we provide.
+team_description: St. Paul Radiology is a group of 80 independent physicians who rank among Minnesota’s top board-certified, fellowship-trained, subspecialty imaging experts. In addition, our experienced nurses, technicians and administrative staff are courteous, efficient and available to answer any questions you may have about the services we provide.
 testimonials:
   - 
     name: Linda H.
@@ -130,6 +134,17 @@ promotion: |
   	<li class="li2"><span class="s1">General Contact Information</span></li>
   </ul><p>The St. Paul Radiology Mobile App is available for download <br>from the Apple App Store on your iPhone</p>
 ---
+
+
+
+
+
+
+
+
+
+
+
 
 
 

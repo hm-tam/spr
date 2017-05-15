@@ -1,0 +1,206 @@
+<div class="template-apply-form">
+  
+  {{ if {raven:success} }}
+    <h2 class="text-success">Your form was successfully submitted.</h2>
+    <p class="text-success">We'll get back to you soon.</p>
+    {{ raven:submission }}
+      <ul class="list-unstyled alert alert-success">
+        <li><b>Name:</b> {{ 4_first_name }} {{ 4_last_name }}</li>
+        <li><b>Email:</b> {{ 7_email }}</li>
+        <li><b>Submission Date:</b> {{ 1_date_applied }}</li>
+      </ul>
+    {{ /raven:submission }}
+    
+  {{ else }}
+    {{ if {raven:has_errors} }}
+      <h2 clas="text-danger">Looks like something went wrong.</h2>
+      <ul>
+        {{ raven:errors }}
+          {{ missing }}
+            <li class="alert alert-danger">{{ field }} is required</li>
+          {{ /missing }}
+
+          {{ invalid }}
+            <li class="alert alert-danger">{{ field }}: {{ message }}</li>
+          {{ /invalid }}
+
+        {{ /raven:errors }}
+      </ul>
+    {{ /if }}
+
+    {{ raven:form formset="st_paul_radiology_application_for_employment" files="true" }}
+
+      {{# Questions: 1 thru 7 - Basic Info #}}
+      {{ theme:partial src="forms/apply/part-1" }}
+
+      {{# Questions: 8 thru 19 - History #}}
+      {{ theme:partial src="forms/apply/part-2" }}
+
+      {{# Question 20 - Education #}}
+      {{ theme:partial src="forms/apply/part-3" }}
+
+      {{# Question 21 - Experience #}}
+      {{ theme:partial src="forms/apply/part-4" }}
+
+      {{# Question 22 - References #}}
+      {{ theme:partial src="forms/apply/part-5" }}
+
+      {{# Questions: 23 thru 25 - Files and Signature #}}
+      {{ theme:partial src="forms/apply/part-6" }}
+
+      {{# This is our honeypot field to prevent spam entries #}}
+      <input type="text" name="website" class="hidden">
+
+      <button class="btn btn-primary">Submit</button>
+
+    {{ /raven:form }}
+
+  {{ /if }}
+
+</div>
+<!-- Keep radio value data after submit by class - version 2-->
+<script type="text/javascript">
+$(document).ready(function(){
+  var radios = document.getElementsByClassName("this_radio");
+  var val = localStorage.getItem('this_radio');
+  for(var i=0;i<radios.length;i++){
+    if(radios[i].value == val){
+      radios[i].checked = true;
+    }
+  }
+  $('input[class="this_radio"]').on('change', function(){
+    localStorage.setItem('this_radio', $(this).val());
+  
+  });
+});
+
+</script>
+
+<!-- Keep radio value data after submit - version 1-->
+<!-- <script type="text/javascript">
+  $(function() {
+    $("input[type=\"radio\"]").click(function(){
+      var thisElem = $(this);
+      var value = thisElem.val();
+      //localStorage:
+      localStorage.setItem("option", value);
+      //Cookies:
+      //document.cookie="option="+value;
+      });
+    //localStorage:
+    var itemValue = localStorage.getItem("option");
+    if (itemValue !== null) {
+      $("input[value=\""+itemValue+"\"]").click();
+    }
+      /*
+    //Cookies:
+    var n = document.cookie;
+    if (n.indexOf("option=") !== -1) {
+      var cookieValue = n.substring(n.indexOf("option=")+7, n.indexOf(";"))
+      $("input[value=\""+cookieValue+"\"]").click();
+    }
+      */
+  });
+</script> -->
+
+<!-- Keep input field data after submit -->
+<script type="text/javascript">
+      // Set the value to this input
+      
+      // Part 1
+      document.getElementById("4_first_name").value = getSavedValue("4_first_name");    
+      document.getElementById("4_last_name").value = getSavedValue("4_last_name");  
+      document.getElementById("5_address_1").value = getSavedValue("5_address_1");  
+      document.getElementById("5_address_2").value = getSavedValue("5_address_2");  
+      document.getElementById("5_city").value = getSavedValue("5_city");  
+      document.getElementById("5_zip").value = getSavedValue("5_zip");  
+      document.getElementById("6_phone_main").value = getSavedValue("6_phone_main");  
+      document.getElementById("6_phone_alt").value = getSavedValue("6_phone_alt");  
+      document.getElementById("7_email").value = getSavedValue("7_email");  
+      document.getElementById("1_date_applied").value = getSavedValue("1_date_applied");  
+      document.getElementById("2_positions_applied").value = getSavedValue("2_positions_applied");
+      document.getElementById("3a_attribution_website").value = getSavedValue("3a_attribution_website");  
+      document.getElementById("3a_attribution_relation").value = getSavedValue("3a_attribution_relation");  
+      document.getElementById("3a_attribution_other").value = getSavedValue("3a_attribution_other");  
+      document.getElementById("9a_if_yes").value = getSavedValue("9a_if_yes");  
+      document.getElementById("10a_if_yes").value = getSavedValue("10a_if_yes");  
+      document.getElementById("11a_if_yes").value = getSavedValue("11a_if_yes");
+      document.getElementById("15_date_work_start").value = getSavedValue("15_date_work_start");  
+      document.getElementById("16_desired_salary").value = getSavedValue("16_desired_salary");  
+      document.getElementById("17_work_availability").value = getSavedValue("17_work_availability");  
+      document.getElementById("18_work_comments").value = getSavedValue("18_work_comments");  
+      document.getElementById("19a_if_yes").value = getSavedValue("19a_if_yes");  
+      document.getElementById("20_education_A_school_name").value = getSavedValue("20_education_A_school_name");  
+      document.getElementById("20_education_A_location").value = getSavedValue("20_education_A_location");  
+      document.getElementById("20_education_A_years").value = getSavedValue("20_education_A_years");  
+      document.getElementById("20_education_A_degree").value = getSavedValue("20_education_A_degree");  
+      document.getElementById("20_education_A_major").value = getSavedValue("20_education_A_major");  
+      document.getElementById("20_education_B_school_name").value = getSavedValue("20_education_B_school_name");  
+      document.getElementById("20_education_B_location").value = getSavedValue("20_education_B_location");  
+      document.getElementById("20_education_B_years").value = getSavedValue("20_education_B_years");  
+      document.getElementById("20_education_B_degree").value = getSavedValue("20_education_B_degree");  
+      document.getElementById("20_education_B_major").value = getSavedValue("20_education_B_major");  
+      document.getElementById("20_education_C_school_name").value = getSavedValue("20_education_C_school_name");  
+      document.getElementById("20_education_C_location").value = getSavedValue("20_education_C_location");  
+      document.getElementById("20_education_C_years").value = getSavedValue("20_education_C_years");  
+      document.getElementById("20_education_C_degree").value = getSavedValue("20_education_C_degree"); 
+      document.getElementById("20_education_C_major").value = getSavedValue("20_education_C_major"); 
+      document.getElementById("21_experience_A_employer").value = getSavedValue("21_experience_A_employer"); 
+      document.getElementById("21_experience_A_jobtitle").value = getSavedValue("21_experience_A_jobtitle"); 
+      document.getElementById("21_experience_A_workperformed").value = getSavedValue("21_experience_A_workperformed"); 
+      document.getElementById("21_experience_A_dates").value = getSavedValue("21_experience_A_dates"); 
+      document.getElementById("21_experience_A_salary_start").value = getSavedValue("21_experience_A_salary_start"); 
+      document.getElementById("21_experience_A_salary_end").value = getSavedValue("21_experience_A_salary_end"); 
+      document.getElementById("21_experience_A_exit_reason").value = getSavedValue("21_experience_A_exit_reason"); 
+      document.getElementById("21_experience_B_employer").value = getSavedValue("21_experience_B_employer"); 
+      document.getElementById("21_experience_B_jobtitle").value = getSavedValue("21_experience_B_jobtitle"); 
+      document.getElementById("21_experience_B_workperformed").value = getSavedValue("21_experience_B_workperformed"); 
+      document.getElementById("21_experience_B_dates").value = getSavedValue("21_experience_B_dates"); 
+      document.getElementById("21_experience_B_salary_start").value = getSavedValue("21_experience_B_salary_start"); 
+      document.getElementById("21_experience_B_salary_end").value = getSavedValue("21_experience_B_salary_end"); 
+      document.getElementById("21_experience_B_exit_reason").value = getSavedValue("21_experience_B_exit_reason"); 
+      document.getElementById("21_experience_C_employer").value = getSavedValue("21_experience_C_employer"); 
+      document.getElementById("21_experience_C_jobtitle").value = getSavedValue("21_experience_C_jobtitle"); 
+      document.getElementById("21_experience_C_workperformed").value = getSavedValue("21_experience_C_workperformed"); 
+      document.getElementById("21_experience_C_dates").value = getSavedValue("21_experience_C_dates"); 
+      document.getElementById("21_experience_C_salary_start").value = getSavedValue("21_experience_C_salary_start"); 
+      document.getElementById("21_experience_C_salary_end").value = getSavedValue("21_experience_C_salary_end"); 
+      document.getElementById("21_experience_C_exit_reason").value = getSavedValue("21_experience_C_exit_reason");
+      document.getElementById("22_reference_A_name").value = getSavedValue("22_reference_A_name"); 
+      document.getElementById("22_reference_A_relation").value = getSavedValue("22_reference_A_relation"); 
+      document.getElementById("22_reference_A_relation_length").value = getSavedValue("22_reference_A_relation_length"); 
+      document.getElementById("22_reference_A_phone").value = getSavedValue("22_reference_A_phone"); 
+      document.getElementById("22_reference_A_email").value = getSavedValue("22_reference_A_email"); 
+      document.getElementById("22_reference_B_name").value = getSavedValue("22_reference_B_name"); 
+      document.getElementById("22_reference_B_relation").value = getSavedValue("22_reference_B_relation"); 
+      document.getElementById("22_reference_B_relation_length").value = getSavedValue("22_reference_B_relation_length"); 
+      document.getElementById("22_reference_B_phone").value = getSavedValue("22_reference_B_phone"); 
+      document.getElementById("22_reference_B_email").value = getSavedValue("22_reference_B_email"); 
+      document.getElementById("22_reference_C_name").value = getSavedValue("22_reference_C_name"); 
+      document.getElementById("22_reference_C_relation").value = getSavedValue("22_reference_C_relation"); 
+      document.getElementById("22_reference_C_relation_length").value = getSavedValue("22_reference_C_relation_length"); 
+      document.getElementById("22_reference_C_phone").value = getSavedValue("22_reference_C_phone"); 
+      document.getElementById("22_reference_C_email").value = getSavedValue("22_reference_C_email"); 
+      document.getElementById("24_signature").value = getSavedValue("24_signature"); 
+      document.getElementById("25_signature_date").value = getSavedValue("25_signature_date"); 
+
+
+
+      /* Here you can add more inputs to set value. if it's saved */
+
+      //Save the value function - save it to localStorage as (ID, VALUE)
+      function saveValue(e){
+          var id = e.id;  // get the sender's id to save it . 
+          var val = e.value; // get the value. 
+          localStorage.setItem(id, val);// Every time user writing something, the localStorage's value will override . 
+      }
+
+      //get the saved value function - return the value of "v" from localStorage. 
+      function getSavedValue  (v){
+          if (localStorage.getItem(v) === null) {
+              return "";// You can change this to your default value. 
+          }
+          return localStorage.getItem(v);
+      }
+</script>
+

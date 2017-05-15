@@ -1,0 +1,19 @@
+---
+first_name: Rachel
+last_name: Swanson
+name_suffix: ""
+email: rachelswanson56@yahoo.com
+organization: Patient
+phone: "6512760341"
+pager: ""
+address_1: 2335 Woodbridge St
+address_2: "240"
+city: ROSEVILLE
+state: MN
+zip: "55113"
+comments: "I am a former patient of the vein center and I was wondering how to go about getting a new compression stockings because with my insurance I'm supposed to be able to get two pairs per quarter. If you could please email me and let me know that would be greatly appreciated. Or you can call my mom at 651 230 0575."
+patient_interests:
+  - Please send me information by email.
+send_requests:
+  - No printed information needed at this time, thank you.
+---

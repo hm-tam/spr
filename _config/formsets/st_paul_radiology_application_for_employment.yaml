@@ -1,0 +1,181 @@
+# Location (from root) to save form submissions
+submission_save_path: attachments/st-paul-radiology-application-for-employment/
+upload_destination: attachments/uploads/st-paul-radiology-application-for-employment/
+
+_protect:
+  allow:
+    _logged_in: true
+_template: st-paul-radiology-application-for-employment
+
+
+# Fields allowed to be submitted in the form, automatically
+# purging anything and everything else
+allowed:
+  - 1_date_applied
+  - 2_positions_applied
+  - 3_attribution
+  - 3a_attribution_website
+  - 3a_attribution_relation
+  - 3a_attribution_other
+  - 4_first_name
+  - 4_last_name
+  - 5_address_1
+  - 5_address_2
+  - 5_city
+  - 5_state
+  - 5_zip
+  - 6_phone_main
+  - 6_phone_alt
+  - 7_email
+  - 8_age_check
+  - 9_applied_before
+  - 9a_if_yes
+  - 10_employed_spr_before
+  - 10a_if_yes
+  - 11_relatives_at_spr
+  - 11a_if_yes
+  - 12_employed_current
+  - 13_employed_contact
+  - 14_visa_status
+  - 15_date_work_start
+  - 16_desired_salary
+  - 17_work_availability
+  - 18_work_comments
+  - 19_job_discharge
+  - 19a_if_yes
+  - 20_education_HS_diploma
+  - 20_education_A_school_name
+  - 20_education_A_location
+  - 20_education_A_years
+  - 20_education_A_degree
+  - 20_education_A_major
+  - 20_education_B_school_name
+  - 20_education_B_location
+  - 20_education_B_years
+  - 20_education_B_degree
+  - 20_education_B_major
+  - 20_education_C_school_name
+  - 20_education_C_location
+  - 20_education_C_years
+  - 20_education_C_degree
+  - 20_education_C_major
+  - 21_experience_A_employer
+  - 21_experience_A_jobtitle
+  - 21_experience_A_workperformed
+  - 21_experience_A_dates
+  - 21_experience_A_salary_start
+  - 21_experience_A_salary_end
+  - 21_experience_A_exit_reason
+  - 21_experience_A_contact
+  - 21_experience_B_employer
+  - 21_experience_B_jobtitle
+  - 21_experience_B_workperformed
+  - 21_experience_B_dates
+  - 21_experience_B_salary_start
+  - 21_experience_B_salary_end
+  - 21_experience_B_exit_reason
+  - 21_experience_B_contact
+  - 21_experience_C_employer
+  - 21_experience_C_jobtitle
+  - 21_experience_C_workperformed
+  - 21_experience_C_dates
+  - 21_experience_C_salary_start
+  - 21_experience_C_salary_end
+  - 21_experience_C_exit_reason
+  - 21_experience_C_contact
+  - 22_reference_A_name
+  - 22_reference_A_relation
+  - 22_reference_A_relation_length
+  - 22_reference_A_phone
+  - 22_reference_A_email
+  - 22_reference_B_name
+  - 22_reference_B_relation
+  - 22_reference_B_relation_length
+  - 22_reference_B_phone
+  - 22_reference_B_email
+  - 22_reference_C_name
+  - 22_reference_C_relation
+  - 22_reference_C_relation_length
+  - 22_reference_C_phone
+  - 22_reference_C_email
+  - 23_file_coverletter
+  - 23_file_resume
+  - 24_signature
+  - 25_signature_date
+
+honeypot: website
+
+# You are not required to require fields, but once you do, any missing
+# from the POST will squash this submission and send a list of
+# missing fields to your {{ raven:errors }} tagpair
+required:
+  - 1_date_applied
+  - 2_positions_applied
+  - 3_attribution
+  - 4_first_name
+  - 4_last_name
+  - 5_address_1
+  - 5_city
+  - 5_state
+  - 5_zip
+  - 6_phone_main
+  - 7_email
+  - 8_age_check
+  - 9_applied_before
+  - 10_employed_spr_before
+  - 11_relatives_at_spr
+  - 12_employed_current
+  - 13_employed_contact
+  - 14_visa_status
+  - 15_date_work_start
+  - 16_desired_salary
+  - 17_work_availability
+  - 20_education_HS_diploma
+  - 21_experience_A_employer
+  - 21_experience_A_jobtitle
+  - 21_experience_A_workperformed
+  - 21_experience_A_dates
+  - 21_experience_A_salary_start
+  - 21_experience_A_salary_end
+  - 21_experience_A_exit_reason
+  - 21_experience_A_contact
+  - 24_signature
+  - 25_signature_date
+
+submission_save_extension: yaml
+
+# Apply validation rules to specific fields. Refer to documentation
+# for a full list of available rules and their format
+# validate:
+
+# Error messages can be mapped to your fields and passed to the
+# template upon failure. They will be available here:
+#
+# {{ raven:error }}
+#     {{ invalid }}
+#         {{ field }} : {{ message }}
+#     {{ /invalid }}
+# {{ /raven:error }}
+#
+
+#Configure notification email
+email:
+  to: "tam@holmesmillet.com"
+  from: "contact.us@stpaulrad.com"
+  subject: >
+    Application submission from {{ 4_first_name }} {{ 4_last_name }}
+# automagic: true
+# I would use the Automagic function instead of the email templates that are currently being used. Looking at the templates it appears that the desired look is essentially the same view that automagic displays.
+  html_template: email/st_paul_radiology_application_for_employment_html
+  text_template: email/st_paul_radiology_application_for_employment_text
+
+datestamp_format: "m/d/Y"
+
+control_panel:
+  exclude: false
+  fields:
+      - 1_date_applied
+      - 4_first_name
+      - 4_last_name
+      - 23_file_coverletter
+      - 23_file_resume
